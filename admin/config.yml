@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# 記事編集中の下書きを本番反映せず確認できる（任意）
+publish_mode: editorial_workflow
+
+# 画像アップロード先
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+locale: "ja"
+
+collections:
+  - name: "journal"
+    label: "読み物（記事）"
+    label_singular: "記事"
+    description: "タイトル・本文・アイキャッチを入力して「公開」すると、自動でサイトに反映されます。"
+    folder: "content/journal"
+    create: true
+    extension: "md"
+    format: "yaml-frontmatter"
+    slug: "{{fields.slug}}"
+    identifier_field: "title_ja"
+    summary: "{{title_ja}}  —  {{date}}"
+    sortable_fields: ["order", "date", "title_ja"]
+    fields:
+      - { label: "スラッグ（URL・半角英数字とハイフンのみ）", name: "slug", widget: "string", pattern: ['^[a-z0-9-]+$', "半角英字・数字・ハイフンのみで入力してください（例：my-first-post）"], hint: "この文字列がURLになります。例：/journal/my-first-post/" }
+      - { label: "日本語タイトル", name: "title_ja", widget: "string" }
+      - { label: "英語タイトル（English title）", name: "title_en", widget: "string" }
+      - { label: "カテゴリ（日本語）", name: "category_ja", widget: "string", default: "読み物", hint: "例：インタビュー / 随筆 / 古典 / お知らせ" }
+      - { label: "Category (English)", name: "category_en", widget: "string", default: "Article" }
+      - { label: "公開日", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: "アイキャッチ画像", name: "eyecatch", widget: "image", hint: "横長（16:8程度）推奨。記事上部と一覧に使われます。" }
+      - { label: "抜粋（日本語・一覧やSNSに出る短い説明）", name: "excerpt_ja", widget: "text" }
+      - { label: "Excerpt (English)", name: "excerpt_en", widget: "text" }
+      - { label: "SEO説明（日本語・省略可。空なら抜粋を使用）", name: "desc_ja", widget: "text", required: false }
+      - { label: "SEO description (English, optional)", name: "desc_en", widget: "text", required: false }
+      - { label: "トップページの注目記事に表示する", name: "featured", widget: "boolean", default: false }
+      - { label: "並び順（数字が小さいほど前に出る）", name: "order", widget: "number", default: 100, value_type: "int" }
+      - { label: "形式", name: "style", widget: "select", options: ["article", "qa"], default: "article", hint: "通常は article。質問→回答のインタビュー形式にしたい時だけ qa（見出しに「Q.」が付きます）。" }
+      - { label: "本文（日本語）", name: "body_ja", widget: "markdown" }
+      - { label: "本文（English）", name: "body_en", widget: "markdown" }

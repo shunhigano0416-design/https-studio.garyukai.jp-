@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.pyc
+# 一時ファイル（プレビュー用など）
+__*.html
+!__forms.html
+# build.py が生成する成果物（本番はNetlifyのビルドで再生成）
+/journal/*/index.html
+/en/journal/*/index.html
+/journal/index.html
+/en/journal/index.html
+/about/higano-taku/index.html
+/en/about/higano-taku/index.html
+/sitemap.xml

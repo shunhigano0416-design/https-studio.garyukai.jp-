@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><title>form detection</title></head>
+<body>
+<!-- このファイルはNetlifyにフォームを認識させるための検出用です（訪問者には見えません） -->
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="contact">
+  <input name="bot-field">
+  <input type="text" name="name">
+  <input type="text" name="contact">
+  <input type="text" name="subject">
+  <textarea name="message"></textarea>
+</form>
+</body></html>
