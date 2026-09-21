@@ -28,8 +28,8 @@ def eurl(fn): return fn if str(fn).startswith("http") else f"{BASE}{fn if str(fn
 
 # ---------- fonts / css ----------
 _b64 = base64.b64encode(open(os.path.join(ROOT,"assets/fonts/NameJP.woff2"),"rb").read()).decode()
-FONT_FACE = ('@font-face{font-family:"NameJP";src:url("data:font/woff2;base64,%s") format("woff2");font-display:swap}'
-             '.name-jp{font-family:"NameJP",var(--mincho)}' % _b64)
+FONT_FACE = ('@font-face{font-family:"NameJP";src:url("/assets/fonts/NameJP.woff2") format("woff2");font-display:swap}'
+             '.name-jp{font-family:"NameJP",var(--mincho)}')
 
 CSS_BODY = r'''
 :root{--paper:#f4f2ec;--paper2:#eae6db;--surface:#fffdf8;--ink:#14110b;--ink2:#574f42;--faint:#8f8676;--line:#d8cfbf;--line2:#ebe4d6;--shu:#b83521;--shu-deep:#8f2716;--shu-tint:#f4e7e2;--mincho:__MIN__;--gothic:__GO__;--sans:"Helvetica Neue",Arial,__GO__}
@@ -119,22 +119,26 @@ def nav(lang):
     return (f'<nav class="nav"><div class="wrap"><a class="brand" href="{home}">'
             f'<img class="logo" src="{LOGO}" alt="臥龍会"></a><div class="navr">{links}</div></div></nav>')
 
-def head(lang,title,desc,canonical,alt_ja,alt_en,ld_list,og_type="article",image=None):
+def head(lang,title,desc,canonical,alt_ja,alt_en,ld_list,og_type="article",image=None,extra=""):
     ld="\n".join('<script type="application/ld+json">'+json.dumps(x,ensure_ascii=False)+'</script>' for x in ld_list)
     img=image or OGP
+    feed_title="臥龍会 読み物" if lang=="ja" else "Garyukai Journal"
     return (f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8">'
             f'<meta name="viewport" content="width=device-width,initial-scale=1">\n'
             f'<title>{esc(title)}</title>\n<meta name="description" content="{esc(desc)}">\n'
             f'<link rel="canonical" href="{canonical}">\n'
             f'<link rel="alternate" hreflang="ja" href="{alt_ja}"><link rel="alternate" hreflang="en" href="{alt_en}">'
             f'<link rel="alternate" hreflang="x-default" href="{alt_ja}">\n'
+            f'<link rel="alternate" type="application/rss+xml" title="{feed_title}" href="{BASE}/feed.xml">\n'
             f'<meta property="og:type" content="{og_type}"><meta property="og:title" content="{esc(title)}">'
             f'<meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}">'
             f'<meta property="og:image" content="{img}"><meta name="twitter:card" content="summary_large_image">'
             f'<meta property="og:locale" content="{"ja_JP" if lang=="ja" else "en_US"}">\n'
+            f'{extra}'
             f'<link rel="icon" href="{BASE}/favicon.ico" sizes="any">'
             f'<link rel="icon" type="image/png" sizes="32x32" href="{BASE}/favicon-32.png">'
             f'<link rel="apple-touch-icon" href="{BASE}/apple-touch-icon.png"><meta name="theme-color" content="#f3f1ea">\n'
+            f'<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
             f'{css(lang)}\n{ld}\n</head><body>{nav(lang)}<main><div class="wrap">')
 FOOT='</div></main><footer><div class="wrap"><p>書道研究 臥龍会 · GARYUKAI · studio.garyukai.jp</p></div></footer></body></html>'
 
@@ -278,14 +282,27 @@ def load_articles():
 def article_url(slug,lang): return f"{BASE}/{'en/' if lang=='en' else ''}journal/{slug}/"
 
 # ---------- builders ----------
+def breadcrumb_ld(items):
+    return {"@context":"https://schema.org","@type":"BreadcrumbList",
+            "itemListElement":[{"@type":"ListItem","position":i+1,"name":n,"item":u} for i,(n,u) in enumerate(items)]}
+
 def build_article(a,lang):
     slug=a["slug"]
     title=a["title_"+lang] or a.get("title_ja","")
     desc=(a.get("desc_"+lang) or a.get("excerpt_"+lang) or "")[:300]
     lead=a.get("excerpt_"+lang,"")
     img=eurl(a.get("eyecatch",""))
+    date=str(a.get("date","")); section=a.get("category_"+lang,"") or "Journal"
     url=article_url(slug,lang); alt_ja=article_url(slug,"ja"); alt_en=article_url(slug,"en")
-    ld=[article_ld(lang,title,desc,url,img,str(a.get("date","")))]
+    home=(BASE+"/") if lang=="ja" else (BASE+"/en/")
+    hub_url=(BASE+"/journal/") if lang=="ja" else (BASE+"/en/journal/")
+    ld=[article_ld(lang,title,desc,url,img,date),
+        breadcrumb_ld([("臥龍会" if lang=="ja" else "Garyukai",home),
+                       ("読み物" if lang=="ja" else "Journal",hub_url),(title,url)])]
+    extra=(f'<meta property="article:published_time" content="{date}">'
+           f'<meta property="article:modified_time" content="{date}">'
+           f'<meta property="article:author" content="{"日賀野 琢" if lang=="ja" else "Taku Higano"}">'
+           f'<meta property="article:section" content="{esc(section)}">')
     body_md=a.get("body_"+lang,"") or ""
     if a.get("style")=="qa":
         body=qa_html(body_md,lang)
@@ -298,8 +315,8 @@ def build_article(a,lang):
     else:
         by=f'By <a href="{BASE}/en/about/higano-taku/">Taku Higano — third-generation head of Garyukai</a>'
         back="Back to Journal"
-    h=head(lang,title,desc,url,alt_ja,alt_en,ld,image=img)
-    page=(h+f'<img class="eyecatch" src="{img}" alt="{esc(title)}">'
+    h=head(lang,title,desc,url,alt_ja,alt_en,ld,image=img,extra=extra)
+    page=(h+f'<img class="eyecatch" src="{img}" alt="{esc(title)}" width="1200" height="600">'
           f'<p class="eyebrow">{esc(eyebrow)}</p><h1>{esc(title)}</h1>'
           f'<p class="byline">{by}</p>'
           + (f'<p class="lead">{esc(lead)}</p>' if lead else '')
@@ -328,7 +345,10 @@ def build_hub(arts,lang):
         title="Journal — In the Words of Taku Higano | Garyukai"
         desc="Interviews with Taku Higano, third-generation head of the Garyukai calligraphy institute: what shodo is, the allure of seal and clerical script, and a life lived by the brush."
         eyebrow="Journal"; h1="In the Master's Words"; lead="The depth of Japanese calligraphy, in the words of Taku Higano, third-generation head of Garyukai."
-    ld=[{"@context":"https://schema.org","@type":"CollectionPage","name":title,"description":desc,"inLanguage":lang,"url":url,"isPartOf":ORG},ORG]
+    home=(BASE+"/") if lang=="ja" else (BASE+"/en/")
+    ld=[{"@context":"https://schema.org","@type":"CollectionPage","name":title,"description":desc,"inLanguage":lang,"url":url,"isPartOf":ORG},
+        breadcrumb_ld([("臥龍会" if lang=="ja" else "Garyukai",home),("読み物" if lang=="ja" else "Journal",url)]),
+        ORG]
     cards="".join(card(a,lang) for a in arts)
     h=head(lang,title,desc,url,alt_ja,alt_en,ld,og_type="website")
     page=(h+f'<p class="eyebrow">{esc(eyebrow)}</p><h1>{esc(h1)}</h1><p class="lead">{esc(lead)}</p>'
@@ -387,6 +407,35 @@ def build_sitemap(arts):
     xml='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+body+'</urlset>'
     open(os.path.join(ROOT,"sitemap.xml"),"w",encoding="utf-8").write(xml)
 
+def _rfc822(d):
+    try: dt=datetime.datetime.strptime(str(d),"%Y-%m-%d")
+    except Exception: dt=datetime.datetime.today()
+    return dt.strftime("%a, %d %b %Y 09:00:00 +0900")
+
+def build_feed(arts):
+    # RSS 2.0 (Japanese primary) — aids discovery / AIO / subscriptions
+    recent=sorted(arts,key=lambda a:str(a.get("date","")),reverse=True)
+    items=[]
+    for a in recent:
+        u=article_url(a["slug"],"ja")
+        items.append(
+            "<item>"
+            f"<title>{esc(a.get('title_ja',''))}</title>"
+            f"<link>{u}</link><guid isPermaLink=\"true\">{u}</guid>"
+            f"<pubDate>{_rfc822(a.get('date',''))}</pubDate>"
+            f"<category>{esc(a.get('category_ja',''))}</category>"
+            f"<description>{esc(a.get('excerpt_ja',''))}</description>"
+            "</item>")
+    xml=('<?xml version="1.0" encoding="UTF-8"?>\n'
+         '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
+         '<title>臥龍会 読み物 — 書家 日賀野琢に聞く</title>'
+         f'<link>{BASE}/journal/</link>'
+         '<description>書道研究 臥龍会の読み物。書道とは何か、篆書・隷書の魅力、書家として生きること。</description>'
+         '<language>ja</language>'
+         f'<atom:link href="{BASE}/feed.xml" rel="self" type="application/rss+xml"/>'
+         +"".join(items)+'</channel></rss>')
+    open(os.path.join(ROOT,"feed.xml"),"w",encoding="utf-8").write(xml)
+
 def main():
     arts=load_articles()
     print(f"Loaded {len(arts)} articles:", ", ".join(a["slug"] for a in arts))
@@ -395,6 +444,7 @@ def main():
     build_hub(arts,"ja"); build_hub(arts,"en")
     build_author(arts,"ja"); build_author(arts,"en")
     build_sitemap(arts)
+    build_feed(arts)
     inject_lp(arts)
     print("Build complete.")
 
