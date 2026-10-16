@@ -247,6 +247,11 @@ a{color:inherit}
 .jrow .jdate{flex:none}
 .jmore-all{display:inline-block;margin-top:26px;font-family:var(--mincho);font-weight:700;font-size:16px;letter-spacing:.04em;color:var(--shu);text-decoration:none;transition:opacity .2s}
 .jmore-all:hover{opacity:.65}
+.jcta{margin-top:clamp(36px,5vw,56px);background:var(--bg2);padding:clamp(32px,4.5vw,52px) clamp(24px,4vw,48px);text-align:center}
+.jcta h3{font-family:var(--mincho);font-weight:800;font-size:clamp(22px,2.8vw,30px);color:var(--ink);line-height:1.5;letter-spacing:.02em}
+.jcta p{margin:14px auto 0;max-width:46ch;color:var(--ink2);font-size:15.5px;line-height:1.95}
+.jcta-btn{display:inline-block;margin-top:24px;background:var(--shu);color:#fff;font-family:var(--mincho);font-weight:800;letter-spacing:.06em;font-size:16px;padding:16px 40px;text-decoration:none;transition:background .2s,transform .2s}
+.jcta-btn:hover{background:var(--shu-deep);transform:translateY(-1px)}
 @media (max-width:860px){.jhero{grid-template-columns:1fr;gap:0}.jhero .jbody{padding-top:22px}.jrow{gap:14px}}
 
 /* CONTACT — left aligned */
@@ -384,6 +389,18 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:66px 0 52p
   </div>
 </section>
 
+<section class="sec journal" id="journal">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow">読み物</p>
+      <h2 class="oneline">読み物 ——書家に聞く</h2>
+      <p class="lead"><span class="nb">臥龍会 三代目・日賀野<span class="name-jp">琢</span>の言葉で、</span><span class="nb">書道の奥深さをお伝えします。</span></p>
+    </div>
+    <div class="jgrid reveal"><!--JCARDS--><a class="jhero" href="https://studio.garyukai.jp/journal/what-is-shodo/"><div class="jthumb"><img loading="lazy" decoding="async" src="https://studio.garyukai.jp/assets/img_bf24f397e44d.jpg" alt="書道とは何か——習字・カリグラフィーとの違い"></div><div class="jbody"><span class="jcat">書の基礎</span><h3>書道とは何か——習字・カリグラフィーとの違い</h3><p>書道とは「筆で自分を表現する芸術」。習字（書写）や西洋のカリグラフィーとの違いから、臥龍会 三代目・日賀野<span class="name-jp">琢</span>がやさしく解説します。</p><time class="jdate" datetime="2026-10-14">2026.10.14</time><span class="jmore">続きを読む →</span></div></a><div class="jlist"><a class="jrow" href="https://studio.garyukai.jp/journal/kanji-origins/"><span class="jrow-t">漢字はどこから来たのか——象形文字のはなし</span><time class="jdate" datetime="2026-10-14">2026.10.14</time></a><a class="jrow" href="https://studio.garyukai.jp/journal/five-scripts/"><span class="jrow-t">五体入門——篆書・隷書・楷書・行書・草書</span><time class="jdate" datetime="2026-10-14">2026.10.14</time></a><a class="jrow" href="https://studio.garyukai.jp/journal/higano-taku-story/"><span class="jrow-t">三代目・日賀野 <span class="name-jp">琢</span> ——「書は、生きる業」</span><time class="jdate" datetime="2026-09-06">2026.09.06</time></a><a class="jrow" href="https://studio.garyukai.jp/journal/good-vs-skilled-calligraphy/"><span class="jrow-t">「うまい字」と「良い字」はどう違うのか</span><time class="jdate" datetime="2026-09-06">2026.09.06</time></a><a class="jrow" href="https://studio.garyukai.jp/journal/tensho-reisho-ancient-scripts/"><span class="jrow-t">篆書・隷書 ——古代文字に惹かれて</span><time class="jdate" datetime="2026-09-06">2026.09.06</time></a></div><a class="jmore-all" href="https://studio.garyukai.jp/journal/">そのほかの記事はこちら →</a><!--/JCARDS--></div>
+    <div class="jcta reveal"><h3>御社の場面に、書を。</h3><p>作品制作・空間装飾から企業研修・講演まで。お見積り・ご相談だけでも歓迎です。</p><a class="jcta-btn" href="#contact">お問い合わせはこちら →</a></div>
+  </div>
+</section>
+
 <section class="sec" id="services">
   <div class="wrap">
     <div class="sec-head center reveal" style="max-width:none">
@@ -518,16 +535,6 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:66px 0 52p
   </div>
 </section>
 
-<section class="sec journal" id="journal">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <p class="eyebrow">読み物</p>
-      <h2 class="oneline">読み物 ——書家に聞く</h2>
-      <p class="lead"><span class="nb">臥龍会 三代目・日賀野<span class="name-jp">琢</span>の言葉で、</span><span class="nb">書道の奥深さをお伝えします。</span></p>
-    </div>
-    <div class="jgrid reveal"><!--JCARDS--><a class="jhero" href="https://studio.garyukai.jp/journal/what-is-shodo/"><div class="jthumb"><img loading="lazy" decoding="async" src="https://studio.garyukai.jp/assets/img_bf24f397e44d.jpg" alt="書道とは何か——習字・カリグラフィーとの違い"></div><div class="jbody"><span class="jcat">書の基礎</span><h3>書道とは何か——習字・カリグラフィーとの違い</h3><p>書道とは「筆で自分を表現する芸術」。習字（書写）や西洋のカリグラフィーとの違いから、臥龍会 三代目・日賀野<span class="name-jp">琢</span>がやさしく解説します。</p><time class="jdate" datetime="2026-10-14">2026.10.14</time><span class="jmore">続きを読む →</span></div></a><div class="jlist"><a class="jrow" href="https://studio.garyukai.jp/journal/kanji-origins/"><span class="jrow-t">漢字はどこから来たのか——象形文字のはなし</span><time class="jdate" datetime="2026-10-14">2026.10.14</time></a><a class="jrow" href="https://studio.garyukai.jp/journal/five-scripts/"><span class="jrow-t">五体入門——篆書・隷書・楷書・行書・草書</span><time class="jdate" datetime="2026-10-14">2026.10.14</time></a><a class="jrow" href="https://studio.garyukai.jp/journal/higano-taku-story/"><span class="jrow-t">三代目・日賀野 <span class="name-jp">琢</span> ——「書は、生きる業」</span><time class="jdate" datetime="2026-09-06">2026.09.06</time></a><a class="jrow" href="https://studio.garyukai.jp/journal/good-vs-skilled-calligraphy/"><span class="jrow-t">「うまい字」と「良い字」はどう違うのか</span><time class="jdate" datetime="2026-09-06">2026.09.06</time></a><a class="jrow" href="https://studio.garyukai.jp/journal/tensho-reisho-ancient-scripts/"><span class="jrow-t">篆書・隷書 ——古代文字に惹かれて</span><time class="jdate" datetime="2026-09-06">2026.09.06</time></a></div><a class="jmore-all" href="https://studio.garyukai.jp/journal/">そのほかの記事はこちら →</a><!--/JCARDS--></div>
-  </div>
-</section>
 
 <section class="sec contact" id="contact">
   <div class="wrap">
