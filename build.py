@@ -25,6 +25,8 @@ AUTHOR_PHOTO = "img_904b72b379bc.jpg"
 
 def esc(s): return html.escape(s or "", quote=True)
 def eurl(fn): return fn if str(fn).startswith("http") else f"{BASE}{fn if str(fn).startswith('/') else '/assets/'+fn}"
+def disp_date(d):
+    return str(d or "")[:10].replace("-", ".")
 
 # ---------- fonts / css ----------
 _b64 = base64.b64encode(open(os.path.join(ROOT,"assets/fonts/NameJP.woff2"),"rb").read()).decode()
@@ -54,6 +56,8 @@ main{padding:clamp(26px,4vw,44px) 0 clamp(48px,7vw,80px)}
 h1{font-family:var(--mincho);font-weight:800;font-size:clamp(28px,4.6vw,44px);line-height:1.3;letter-spacing:.01em;margin:10px 0 0;text-wrap:pretty}
 .byline{margin:18px 0 0;font-size:13.5px;color:var(--faint)}
 .byline a{color:var(--ink2);text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:1px;text-underline-offset:.35em}
+.pubdate{margin:10px 0 0;font-family:var(--sans);font-size:12px;letter-spacing:.06em;color:var(--faint)}
+.card .cdate{display:block;margin-top:10px;font-family:var(--sans);font-size:11.5px;letter-spacing:.06em;color:var(--faint)}
 .lead{margin:24px 0 0;font-size:clamp(16px,1.7vw,18.5px);line-height:1.95;color:var(--ink2)}
 .qa{margin-top:clamp(26px,4vw,40px)}
 .qa h2{font-family:var(--mincho);font-weight:800;font-size:clamp(19px,2.4vw,25px);line-height:1.5;letter-spacing:.01em;margin:0 0 12px;text-wrap:pretty}
@@ -319,6 +323,7 @@ def build_article(a,lang):
     page=(h+f'<img class="eyecatch" src="{img}" alt="{esc(title)}" width="1200" height="600">'
           f'<p class="eyebrow">{esc(eyebrow)}</p><h1>{esc(title)}</h1>'
           f'<p class="byline">{by}</p>'
+          + f'<p class="pubdate"><time datetime="{date}">{("公開 " if lang=="ja" else "Published ")}{disp_date(date)}</time></p>'
           + (f'<p class="lead">{esc(lead)}</p>' if lead else '')
           + body + cta(lang)
           + f'<a class="backlink" href="{BASE}/{"en/" if lang=="en" else ""}journal/">← {back}</a>'
@@ -330,9 +335,10 @@ def card(a,lang,klass="card"):
     title=a["title_"+lang] or a.get("title_ja","")
     cat=a.get("category_"+lang,"") ; ex=a.get("excerpt_"+lang,"")
     img=eurl(a.get("eyecatch",""))
+    iso=str(a.get('date',''))[:10]
     return (f'<a class="{klass}" href="{url}"><img class="thumb" src="{img}" alt="{esc(title)}">'
             f'<div class="body"><span class="k">{esc(cat)}</span><h3>{esc(title)}</h3>'
-            f'<p>{esc(ex)}</p></div></a>')
+            f'<p>{esc(ex)}</p><time class="cdate" datetime="{iso}">{disp_date(iso)}</time></div></a>')
 
 def build_hub(arts,lang):
     url=(BASE+"/journal/") if lang=="ja" else (BASE+"/en/journal/")
@@ -372,17 +378,27 @@ def build_author(arts,lang):
 
 # ---------- LP featured cards injection ----------
 def lp_cards(arts,lang):
-    feats=[a for a in arts if a.get("featured")][:3]
-    cats={"ja":"jcat","en":"jcat"}
-    out=[]
-    for i,a in enumerate(feats):
-        slug=a["slug"]; url=f"{BASE}/{'en/' if lang=='en' else ''}journal/{slug}/"
-        title=a["title_"+lang] or a.get("title_ja",""); cat=a.get("category_"+lang,""); ex=a.get("excerpt_"+lang,"")
-        img=eurl(a.get("eyecatch",""))
-        more="続きを読む →" if lang=="ja" else "READ →"
-        out.append(f'<a class="jcard" href="{url}"><div class="jthumb"><img loading="lazy" decoding="async" src="{img}" alt="{esc(title)}"></div>'
-                   f'<div class="jbody"><span class="jcat">{esc(cat)}</span><h3>{esc(title)}</h3><p>{esc(ex)}</p><span class="jmore">{more}</span></div></a>')
-    return "\n".join(out)
+    # newest first (date desc, then order asc within same date)
+    items=sorted(arts,key=lambda a:(str(a.get("date","")), -a.get("order",999)), reverse=True)
+    if not items: return ""
+    big=items[0]; rest=items[1:6]; overflow=len(items)>6
+    hub=f"{BASE}/{'en/' if lang=='en' else ''}journal/"
+    def u(a): return f"{BASE}/{'en/' if lang=='en' else ''}journal/{a['slug']}/"
+    more_lbl="続きを読む →" if lang=="ja" else "Read →"
+    t=big["title_"+lang] or big.get("title_ja",""); cat=big.get("category_"+lang,""); ex=big.get("excerpt_"+lang,"")
+    iso=str(big.get("date",""))[:10]
+    hero=(f'<a class="jhero" href="{u(big)}"><div class="jthumb"><img loading="lazy" decoding="async" src="{eurl(big.get("eyecatch",""))}" alt="{esc(t)}"></div>'
+          f'<div class="jbody"><span class="jcat">{esc(cat)}</span><h3>{esc(t)}</h3><p>{esc(ex)}</p>'
+          f'<time class="jdate" datetime="{iso}">{disp_date(iso)}</time><span class="jmore">{more_lbl}</span></div></a>')
+    rows=[]
+    for a in rest:
+        rt=a["title_"+lang] or a.get("title_ja",""); riso=str(a.get("date",""))[:10]
+        rows.append(f'<a class="jrow" href="{u(a)}"><span class="jrow-t">{esc(rt)}</span>'
+                    f'<time class="jdate" datetime="{riso}">{disp_date(riso)}</time></a>')
+    lst=f'<div class="jlist">{"".join(rows)}</div>' if rows else ""
+    more=(f'<a class="jmore-all" href="{hub}">'
+          f'{"そのほかの記事はこちら →" if lang=="ja" else "See all articles →"}</a>') if overflow else ""
+    return hero+lst+more
 
 def inject_lp(arts):
     for lang,path in (("ja","index.html"),("en","en/index.html")):

@@ -226,26 +226,28 @@ a{color:inherit}
 @media (max-width:860px){.price-grid{grid-template-columns:1fr;gap:36px}}
 
 /* JOURNAL — flat gallery cards, featured first, no boxes/shadow/lift */
-.jgrid{margin-top:var(--block-gap);display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(40px,5vw,64px) clamp(30px,4vw,48px)}
-.jcard{display:flex;flex-direction:column;text-decoration:none;background:none;border:none}
-.jcard:first-child{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,4vw,56px);align-items:center}
-.jthumb{aspect-ratio:16/10;overflow:hidden}
-.jcard:first-child .jthumb{aspect-ratio:16/10}
-.jthumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-.jcard:hover .jthumb img{transform:scale(1.04)}
-.jbody{padding:22px 0 0;display:flex;flex-direction:column;flex:1}
-.jcard:first-child .jbody{padding:0}
+/* JOURNAL (LP) — hero + title list */
+.jgrid{margin-top:var(--block-gap)}
+.jhero{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,4vw,56px);align-items:center;text-decoration:none}
+.jhero .jthumb{aspect-ratio:16/10;overflow:hidden}
+.jhero .jthumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.jhero:hover .jthumb img{transform:scale(1.04)}
+.jhero .jbody{display:flex;flex-direction:column}
 .jcat{font-family:var(--mincho);font-weight:700;font-size:12.5px;letter-spacing:.06em;color:var(--shu)}
-.jcard h3{font-family:var(--mincho);font-weight:800;font-size:21px;line-height:1.45;letter-spacing:.01em;margin:12px 0 0;color:var(--ink);text-wrap:balance}
-.jcard:first-child h3{font-size:clamp(27px,3vw,42px);line-height:1.28}
-.jcard p{margin:14px 0 0;font-size:14.5px;line-height:1.9;color:var(--ink2)}
-.jcard:first-child p{font-size:16px}
-.jmore{margin-top:16px;font-family:var(--mincho);font-weight:700;font-size:13.5px;letter-spacing:.04em;color:var(--shu);align-self:flex-start;transition:opacity .2s}
-.jcard:hover .jmore{opacity:.65}
-.j-all{margin-top:56px}
-.j-all a{font-family:var(--mincho);font-weight:700;font-size:16px;letter-spacing:.04em;color:var(--shu);text-decoration:none;transition:opacity .2s}
-.j-all a:hover{opacity:.65}
-@media (max-width:860px){.jgrid{grid-template-columns:1fr;gap:40px}.jcard:first-child{grid-template-columns:1fr;gap:0}.jcard:first-child .jbody{padding:22px 0 0}}
+.jhero h3{font-family:var(--mincho);font-weight:800;font-size:clamp(27px,3vw,42px);line-height:1.28;letter-spacing:.01em;margin:12px 0 0;color:var(--ink);text-wrap:balance}
+.jhero p{margin:14px 0 0;font-size:16px;line-height:1.9;color:var(--ink2)}
+.jdate{font-family:var(--sans);font-size:12px;letter-spacing:.06em;color:var(--faint)}
+.jhero .jdate{margin-top:16px}
+.jhero .jmore{margin-top:8px;font-family:var(--mincho);font-weight:700;font-size:13.5px;letter-spacing:.04em;color:var(--shu);transition:opacity .2s}
+.jhero:hover .jmore{opacity:.65}
+.jlist{margin-top:clamp(28px,4vw,40px);display:flex;flex-direction:column}
+.jrow{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:13px 0;text-decoration:none}
+.jrow-t{font-family:var(--mincho);font-weight:700;font-size:clamp(16px,1.9vw,19px);line-height:1.5;color:var(--ink);text-wrap:balance;transition:color .2s}
+.jrow:hover .jrow-t{color:var(--shu)}
+.jrow .jdate{flex:none}
+.jmore-all{display:inline-block;margin-top:26px;font-family:var(--mincho);font-weight:700;font-size:16px;letter-spacing:.04em;color:var(--shu);text-decoration:none;transition:opacity .2s}
+.jmore-all:hover{opacity:.65}
+@media (max-width:860px){.jhero{grid-template-columns:1fr;gap:0}.jhero .jbody{padding-top:22px}.jrow{gap:14px}}
 
 /* CONTACT — left aligned */
 .contact{text-align:center}
@@ -523,10 +525,7 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:66px 0 52p
       <h2 class="oneline">読み物 ——書家に聞く</h2>
       <p class="lead"><span class="nb">臥龍会 三代目・日賀野<span class="name-jp">琢</span>の言葉で、</span><span class="nb">書道の奥深さをお伝えします。</span></p>
     </div>
-    <div class="jgrid reveal"><!--JCARDS--><a class="jcard" href="https://studio.garyukai.jp/journal/higano-taku-story/"><div class="jthumb"><img loading="lazy" decoding="async" src="https://studio.garyukai.jp/assets/img_719ae2b74fa6.jpg" alt="三代目・日賀野 琢 ——「書は、生きる業」"></div><div class="jbody"><span class="jcat">インタビュー</span><h3>三代目・日賀野 <span class="name-jp">琢</span> ——「書は、生きる業」</h3><p>書道研究 臥龍会 三代目・日賀野<span class="name-jp">琢</span>。八十余年続く書道会を継ぎ、篆書・隷書を専門とする書家が、自らの歩みと「書とは何か」を語ります。</p><span class="jmore">続きを読む →</span></div></a>
-<a class="jcard" href="https://studio.garyukai.jp/journal/good-vs-skilled-calligraphy/"><div class="jthumb"><img loading="lazy" decoding="async" src="https://studio.garyukai.jp/assets/img_b7f922aafcbb.jpg" alt="「うまい字」と「良い字」はどう違うのか"></div><div class="jbody"><span class="jcat">随筆</span><h3>「うまい字」と「良い字」はどう違うのか</h3><p>「うまい字」と「良い字」は、巧拙（巧み・拙い）と美醜（美しい・醜い）の掛け合わせで考える——たとえ技術が拙くても、自分をさらけ出した字にこそ「良さ」が宿ります。</p><span class="jmore">続きを読む →</span></div></a>
-<a class="jcard" href="https://studio.garyukai.jp/journal/tensho-reisho-ancient-scripts/"><div class="jthumb"><img loading="lazy" decoding="async" src="https://studio.garyukai.jp/assets/img_5caa3b7da8e1.jpg" alt="篆書・隷書 ——古代文字に惹かれて"></div><div class="jbody"><span class="jcat">古典</span><h3>篆書・隷書 ——古代文字に惹かれて</h3><p>篆書・隷書＝古代文字は、時代は古いのに現代的な要素を持っています。文字が生まれた頃の姿は神秘的で、知れば知るほど、書けば書くほど興味が尽きません。</p><span class="jmore">続きを読む →</span></div></a><!--/JCARDS--></div>
-    <div class="j-all reveal"><a href="/journal/">読み物の一覧を見る →</a></div>
+    <div class="jgrid reveal"><!--JCARDS--><a class="jhero" href="https://studio.garyukai.jp/journal/what-is-shodo/"><div class="jthumb"><img loading="lazy" decoding="async" src="https://studio.garyukai.jp/assets/img_bf24f397e44d.jpg" alt="書道とは何か——習字・カリグラフィーとの違い"></div><div class="jbody"><span class="jcat">書の基礎</span><h3>書道とは何か——習字・カリグラフィーとの違い</h3><p>書道とは「筆で自分を表現する芸術」。習字（書写）や西洋のカリグラフィーとの違いから、臥龍会 三代目・日賀野<span class="name-jp">琢</span>がやさしく解説します。</p><time class="jdate" datetime="2026-10-14">2026.10.14</time><span class="jmore">続きを読む →</span></div></a><div class="jlist"><a class="jrow" href="https://studio.garyukai.jp/journal/kanji-origins/"><span class="jrow-t">漢字はどこから来たのか——象形文字のはなし</span><time class="jdate" datetime="2026-10-14">2026.10.14</time></a><a class="jrow" href="https://studio.garyukai.jp/journal/five-scripts/"><span class="jrow-t">五体入門——篆書・隷書・楷書・行書・草書</span><time class="jdate" datetime="2026-10-14">2026.10.14</time></a><a class="jrow" href="https://studio.garyukai.jp/journal/higano-taku-story/"><span class="jrow-t">三代目・日賀野 <span class="name-jp">琢</span> ——「書は、生きる業」</span><time class="jdate" datetime="2026-09-06">2026.09.06</time></a><a class="jrow" href="https://studio.garyukai.jp/journal/good-vs-skilled-calligraphy/"><span class="jrow-t">「うまい字」と「良い字」はどう違うのか</span><time class="jdate" datetime="2026-09-06">2026.09.06</time></a><a class="jrow" href="https://studio.garyukai.jp/journal/tensho-reisho-ancient-scripts/"><span class="jrow-t">篆書・隷書 ——古代文字に惹かれて</span><time class="jdate" datetime="2026-09-06">2026.09.06</time></a></div><a class="jmore-all" href="https://studio.garyukai.jp/journal/">そのほかの記事はこちら →</a><!--/JCARDS--></div>
   </div>
 </section>
 

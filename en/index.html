@@ -224,26 +224,28 @@ a{color:inherit}
 @media (max-width:860px){.price-grid{grid-template-columns:1fr;gap:36px}}
 
 /* JOURNAL — flat gallery cards, featured first, no boxes/shadow/lift */
-.jgrid{margin-top:var(--block-gap);display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(40px,5vw,64px) clamp(30px,4vw,48px)}
-.jcard{display:flex;flex-direction:column;text-decoration:none;background:none;border:none}
-.jcard:first-child{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,4vw,56px);align-items:center}
-.jthumb{aspect-ratio:16/10;overflow:hidden}
-.jcard:first-child .jthumb{aspect-ratio:16/10}
-.jthumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-.jcard:hover .jthumb img{transform:scale(1.04)}
-.jbody{padding:22px 0 0;display:flex;flex-direction:column;flex:1}
-.jcard:first-child .jbody{padding:0}
+/* JOURNAL (LP) — hero + title list */
+.jgrid{margin-top:var(--block-gap)}
+.jhero{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,4vw,56px);align-items:center;text-decoration:none}
+.jhero .jthumb{aspect-ratio:16/10;overflow:hidden}
+.jhero .jthumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.jhero:hover .jthumb img{transform:scale(1.04)}
+.jhero .jbody{display:flex;flex-direction:column}
 .jcat{font-family:var(--mincho);font-weight:700;font-size:12.5px;letter-spacing:.06em;color:var(--shu)}
-.jcard h3{font-family:var(--mincho);font-weight:800;font-size:21px;line-height:1.45;letter-spacing:.01em;margin:12px 0 0;color:var(--ink);text-wrap:balance}
-.jcard:first-child h3{font-size:clamp(27px,3vw,42px);line-height:1.28}
-.jcard p{margin:14px 0 0;font-size:14.5px;line-height:1.9;color:var(--ink2)}
-.jcard:first-child p{font-size:16px}
-.jmore{margin-top:16px;font-family:var(--mincho);font-weight:700;font-size:13.5px;letter-spacing:.04em;color:var(--shu);align-self:flex-start;transition:opacity .2s}
-.jcard:hover .jmore{opacity:.65}
-.j-all{margin-top:56px}
-.j-all a{font-family:var(--mincho);font-weight:700;font-size:16px;letter-spacing:.04em;color:var(--shu);text-decoration:none;transition:opacity .2s}
-.j-all a:hover{opacity:.65}
-@media (max-width:860px){.jgrid{grid-template-columns:1fr;gap:40px}.jcard:first-child{grid-template-columns:1fr;gap:0}.jcard:first-child .jbody{padding:22px 0 0}}
+.jhero h3{font-family:var(--mincho);font-weight:800;font-size:clamp(27px,3vw,42px);line-height:1.28;letter-spacing:.01em;margin:12px 0 0;color:var(--ink);text-wrap:balance}
+.jhero p{margin:14px 0 0;font-size:16px;line-height:1.9;color:var(--ink2)}
+.jdate{font-family:var(--sans);font-size:12px;letter-spacing:.06em;color:var(--faint)}
+.jhero .jdate{margin-top:16px}
+.jhero .jmore{margin-top:8px;font-family:var(--mincho);font-weight:700;font-size:13.5px;letter-spacing:.04em;color:var(--shu);transition:opacity .2s}
+.jhero:hover .jmore{opacity:.65}
+.jlist{margin-top:clamp(28px,4vw,40px);display:flex;flex-direction:column}
+.jrow{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:13px 0;text-decoration:none}
+.jrow-t{font-family:var(--mincho);font-weight:700;font-size:clamp(16px,1.9vw,19px);line-height:1.5;color:var(--ink);text-wrap:balance;transition:color .2s}
+.jrow:hover .jrow-t{color:var(--shu)}
+.jrow .jdate{flex:none}
+.jmore-all{display:inline-block;margin-top:26px;font-family:var(--mincho);font-weight:700;font-size:16px;letter-spacing:.04em;color:var(--shu);text-decoration:none;transition:opacity .2s}
+.jmore-all:hover{opacity:.65}
+@media (max-width:860px){.jhero{grid-template-columns:1fr;gap:0}.jhero .jbody{padding-top:22px}.jrow{gap:14px}}
 
 /* CONTACT — left aligned */
 .contact{text-align:center}
@@ -523,10 +525,7 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:66px 0 52p
       <h2>In the Master&rsquo;s Words</h2>
       <p class="lead">The depth of Japanese calligraphy, in the words of<br>Taku Higano, third-generation head of Garyukai.</p>
     </div>
-    <div class="jgrid reveal"><!--JCARDS--><a class="jcard" href="https://studio.garyukai.jp/en/journal/higano-taku-story/"><div class="jthumb"><img loading="lazy" decoding="async" src="https://studio.garyukai.jp/assets/img_719ae2b74fa6.jpg" alt="Taku Higano: A Life Given to the Brush"></div><div class="jbody"><span class="jcat">Interview</span><h3>Taku Higano: A Life Given to the Brush</h3><p>Taku Higano is the third-generation head of Garyukai, a Japanese calligraphy institute now in its ninth decade. A specialist in seal and clerical script, he speaks here of his path — and of what calligraphy truly is.</p><span class="jmore">READ →</span></div></a>
-<a class="jcard" href="https://studio.garyukai.jp/en/journal/good-vs-skilled-calligraphy/"><div class="jthumb"><img loading="lazy" decoding="async" src="https://studio.garyukai.jp/assets/img_b7f922aafcbb.jpg" alt="&#x27;Skilled&#x27; vs. &#x27;Good&#x27;: What Truly Makes Calligraphy Move Us"></div><div class="jbody"><span class="jcat">Essay</span><h3>&#x27;Skilled&#x27; vs. &#x27;Good&#x27;: What Truly Makes Calligraphy Move Us</h3><p>A &#x27;good&#x27; hand is not the same as a &#x27;skilled&#x27; one. It is the interplay of skill and beauty: even an unpolished hand can be beautiful when it lays the self utterly bare.</p><span class="jmore">READ →</span></div></a>
-<a class="jcard" href="https://studio.garyukai.jp/en/journal/tensho-reisho-ancient-scripts/"><div class="jthumb"><img loading="lazy" decoding="async" src="https://studio.garyukai.jp/assets/img_5caa3b7da8e1.jpg" alt="Seal &amp; Clerical Script: The Allure of Japan&#x27;s Ancient Characters"></div><div class="jbody"><span class="jcat">Craft</span><h3>Seal &amp; Clerical Script: The Allure of Japan&#x27;s Ancient Characters</h3><p>Seal and clerical script — the ancient characters — are old in age yet carry something contemporary. The form of a character at its birth is profoundly mysterious, and endlessly compelling.</p><span class="jmore">READ →</span></div></a><!--/JCARDS--></div>
-    <div class="j-all reveal"><a href="/en/journal/">View all journal entries →</a></div>
+    <div class="jgrid reveal"><!--JCARDS--><a class="jhero" href="https://studio.garyukai.jp/en/journal/what-is-shodo/"><div class="jthumb"><img loading="lazy" decoding="async" src="https://studio.garyukai.jp/assets/img_bf24f397e44d.jpg" alt="What Is Shodo? — And How It Differs from Penmanship and Calligraphy"></div><div class="jbody"><span class="jcat">Primer</span><h3>What Is Shodo? — And How It Differs from Penmanship and Calligraphy</h3><p>Shodo is “the art of expressing yourself with the brush.” Taku Higano of Garyukai explains what sets it apart from penmanship and Western calligraphy.</p><time class="jdate" datetime="2026-10-14">2026.10.14</time><span class="jmore">Read →</span></div></a><div class="jlist"><a class="jrow" href="https://studio.garyukai.jp/en/journal/kanji-origins/"><span class="jrow-t">Where Kanji Come From — The World of Pictographs</span><time class="jdate" datetime="2026-10-14">2026.10.14</time></a><a class="jrow" href="https://studio.garyukai.jp/en/journal/five-scripts/"><span class="jrow-t">The Five Scripts — Seal, Clerical, Standard, Semi-cursive, Cursive</span><time class="jdate" datetime="2026-10-14">2026.10.14</time></a><a class="jrow" href="https://studio.garyukai.jp/en/journal/higano-taku-story/"><span class="jrow-t">Taku Higano: A Life Given to the Brush</span><time class="jdate" datetime="2026-09-06">2026.09.06</time></a><a class="jrow" href="https://studio.garyukai.jp/en/journal/good-vs-skilled-calligraphy/"><span class="jrow-t">&#x27;Skilled&#x27; vs. &#x27;Good&#x27;: What Truly Makes Calligraphy Move Us</span><time class="jdate" datetime="2026-09-06">2026.09.06</time></a><a class="jrow" href="https://studio.garyukai.jp/en/journal/tensho-reisho-ancient-scripts/"><span class="jrow-t">Seal &amp; Clerical Script: The Allure of Japan&#x27;s Ancient Characters</span><time class="jdate" datetime="2026-09-06">2026.09.06</time></a></div><a class="jmore-all" href="https://studio.garyukai.jp/en/journal/">See all articles →</a><!--/JCARDS--></div>
   </div>
 </section>
 
