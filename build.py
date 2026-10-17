@@ -271,7 +271,7 @@ AUTHOR={
    lineage_head="臥龍会の系譜",
    lineage=[
      dict(gen="初代", name="日賀野 東華（とうか）",
-          text="1940年（昭和15年）2月11日、書道教育の普及と研究を目的に臥龍会を創立。月刊競書誌『臥龍』を興し、栃木の書道文化の礎を築いた初代会長。"),
+          text="1940年（昭和15年）2月11日、書道教育の普及と研究を目的に臥龍会を創立し、月刊競書誌『臥龍』を興した初代会長。1947年、臥龍会本部で発起人会が開かれた栃木県書道連盟の結成に携わり、初代副会長を務めるなど、栃木の書道文化の礎を築いた。"),
      dict(gen="二代", name="日賀野 溥（ひろし）",
           text="臥龍会 会長。『臥龍』を全国でも最古参となる競書誌（通巻1,850号超）へと継承・発展させ、創立80周年・85周年を牽引。全国約130支部・約2,000名を擁する県内最大の書道団体へと育てた。"),
      dict(gen="三代", name="日賀野 琢（たく）",
@@ -287,7 +287,7 @@ AUTHOR={
    lineage_head="The Garyukai Lineage",
    lineage=[
      dict(gen="First generation", name="Higano Tōka",
-          text="Founded Garyukai on 11 February 1940 to advance the study and teaching of calligraphy, launching the monthly journal Garyu and laying the foundations of calligraphic culture in Tochigi."),
+          text="Founded Garyukai on 11 February 1940 to advance the study and teaching of calligraphy, and launched the monthly journal Garyu. In 1947 he took part in forming the Tochigi Prefectural Calligraphy Federation — its founding meeting was held at the Garyukai headquarters — and served as its first vice-president, laying the foundations of calligraphic culture in Tochigi."),
      dict(gen="Second generation", name="Higano Hiroshi",
           text="President of Garyukai. He carried the Garyu journal to become one of Japan's longest-running competitive calligraphy monthlies (past its 1,850th issue) and led the 80th and 85th anniversaries, growing Garyukai into the prefecture's largest calligraphy society, with some 130 chapters and around 2,000 members."),
      dict(gen="Third generation", name="Taku Higano",
