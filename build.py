@@ -88,6 +88,12 @@ h1{font-family:var(--mincho);font-weight:800;font-size:clamp(28px,4.6vw,44px);li
 .card .k{font-family:var(--mincho);font-weight:700;font-size:12px;letter-spacing:.06em;color:var(--shu)}
 .card h3{font-family:var(--mincho);font-weight:800;font-size:19px;margin:7px 0 0;color:var(--ink);line-height:1.4}
 .card p{margin:8px 0 0;font-size:14px;color:var(--ink2);line-height:1.8}
+.lineage{margin-top:clamp(16px,2.2vw,24px)}
+.lineage .gen{padding:clamp(18px,2.2vw,24px) 0;border-top:1px solid var(--line)}
+.lineage .gen:last-child{border-bottom:1px solid var(--line)}
+.lineage .gno{font-family:var(--mincho);font-weight:700;font-size:12.5px;letter-spacing:.12em;color:var(--shu)}
+.lineage .gen h3{font-family:var(--mincho);font-weight:800;font-size:clamp(19px,2.2vw,23px);margin:6px 0 0;color:var(--ink);line-height:1.4}
+.lineage .gen p{margin:9px 0 0;font-size:15px;line-height:1.95;color:var(--ink2)}
 .prof{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start}
 .prof .photo{width:210px;aspect-ratio:4/5;background-size:cover;background-position:center top;flex:none}
 .prof .meta{flex:1;min-width:240px}
@@ -254,19 +260,37 @@ def cta(lang):
             f'<a class="btn" href="{BASE}/en/#contact">Get in touch</a></div>')
 
 AUTHOR={
- "ja":dict(title="日賀野 琢 ——書家 / 臥龍会 三代目",
-   desc="書道家 日賀野琢（ひがの たく）。書道研究 臥龍会 三代目・代表取締役。篆書・隷書を専門とし、日展会員、読売書法会 常任理事などを務める。",
+ "ja":dict(title="日賀野 琢　書家 / 臥龍会 三代目",
+   desc="書道家 日賀野琢（ひがの たく）。書道研究 臥龍会 三代目・代表取締役。篆書・隷書を専門とし、日展会員、読売書法会 常任理事などを務める。初代 日賀野東華、二代 日賀野溥と続く臥龍会の系譜を継ぐ。",
    eyebrow="書家",
-   bio="1964年、栃木県宇都宮市生まれ。墨の匂い溢れる環境で生まれ育ち、幼少期から筆を持つ。臥龍会 三代目として代表を務めながら、自身も書活動に没頭。作家活動だけでなく、講演会等を通じて書道を学ぶ楽しさ・奥深さを伝えている。専門は古代文字（篆書・隷書）。",
+   bio="1964年、栃木県宇都宮市生まれ。墨の匂いに包まれた環境で育ち、幼少期から筆を握る。臥龍会 三代目として有限会社臥龍会の代表取締役を務めながら、一書家として創作にも没頭する。専門は古代文字（篆書・隷書）。甲骨文字から現代までつらなる文字の成り立ちを踏まえ、一点一点に文字学的・造形的な意図を込めて揮毫する。日展会員、読売書法会 常任理事、全日本書道連盟 監事、謙慎書道会 副事務局長を務め、埼玉学園大学でも教鞭を執る。作家活動にとどまらず、講演や企業向けの作品制作・揮毫を通じて、八十余年続く臥龍会の書を次代へ、そして社会へと広げている。",
    quote="書は、生きる業（ぎょう）。生きていくためのすべての根源であり、それを取ったら何も残らない。",
    tags=["日展 会員","読売書法会 常任理事","全日本書道連盟 監事","謙慎書道会 副事務局長","埼玉学園大学 講師"],
+   lineage_head="臥龍会の系譜",
+   lineage=[
+     dict(gen="初代", name="日賀野 東華（とうか）",
+          text="1940年（昭和15年）2月11日、書道教育の普及と研究を目的に臥龍会を創立。月刊競書誌『臥龍』を興し、栃木の書道文化の礎を築いた初代会長。"),
+     dict(gen="二代", name="日賀野 溥（ひろし）",
+          text="臥龍会 会長。『臥龍』を全国でも最古参となる競書誌（通巻1,850号超）へと継承・発展させ、創立80周年・85周年を牽引。全国約130支部・約2,000名を擁する県内最大の書道団体へと育てた。"),
+     dict(gen="三代", name="日賀野 琢（たく）",
+          text="有限会社臥龍会 代表取締役／臥龍会 三代目。古代文字（篆書・隷書）を専門とし、日展会員・読売書法会 常任理事ほかを務める。作家活動に加え、企業の作品制作・揮毫・講演を通じて臥龍会の書を社会へ広げている。"),
+   ],
    readmore="読み物で、日賀野琢の言葉を読む", back="読み物一覧へ戻る"),
- "en":dict(title="Taku Higano — Calligrapher, Third Generation of Garyukai",
-   desc="Taku Higano is a Japanese calligrapher and the third-generation head of the Garyukai calligraphy institute. A specialist in seal and clerical script; member of Nitten and standing director of the Yomiuri Shohokai.",
+ "en":dict(title="Taku Higano: Calligrapher, Third Generation of Garyukai",
+   desc="Taku Higano is a Japanese calligrapher and the third-generation head of the Garyukai calligraphy institute. A specialist in seal and clerical script; member of Nitten and standing director of the Yomiuri Shohokai. He continues the Garyukai lineage of Tōka Higano (founder) and Hiroshi Higano.",
    eyebrow="The Master",
-   bio="Born in 1964 in Utsunomiya, Tochigi, Taku Higano was raised amid the scent of sumi ink and took up the brush in early childhood. As the third-generation head of Garyukai, he leads the institute while pursuing his own practice as an artist, sharing the depth and delight of calligraphy through lectures and demonstrations. He specialises in the ancient scripts — seal and clerical.",
+   bio="Born in 1964 in Utsunomiya, Tochigi, Taku Higano grew up surrounded by the scent of sumi ink and took up the brush in early childhood. As the third-generation head of Garyukai and representative director of Garyukai Co., Ltd., he leads the institute while pursuing his own practice as an artist. He specialises in the ancient scripts, seal (tensho) and clerical (reisho), grounding each work in the etymology of characters from oracle-bone forms to the present, with deliberate philological and formal intent. A member of Nitten and standing director of the Yomiuri Shohokai, he has also served as auditor of the All-Japan Calligraphers Federation and deputy secretary-general of the Kenshin Shodokai, and teaches at Saitama Gakuen University. Beyond his own work, through lectures and commissioned pieces and performances for companies, he carries the calligraphy of Garyukai, now in its ninth decade, to the next generation and into wider society.",
    quote="Calligraphy is my life's work — the very root of living. Take it away, and nothing would remain.",
    tags=["Member, Nitten","Standing Director, Yomiuri Shohokai","Auditor, All-Japan Calligraphers Federation","Deputy Secretary-General, Kenshin Shodokai","Lecturer, Saitama Gakuen University"],
+   lineage_head="The Garyukai Lineage",
+   lineage=[
+     dict(gen="First generation", name="Higano Tōka",
+          text="Founded Garyukai on 11 February 1940 to advance the study and teaching of calligraphy, launching the monthly journal Garyu and laying the foundations of calligraphic culture in Tochigi."),
+     dict(gen="Second generation", name="Higano Hiroshi",
+          text="President of Garyukai. He carried the Garyu journal to become one of Japan's longest-running competitive calligraphy monthlies (past its 1,850th issue) and led the 80th and 85th anniversaries, growing Garyukai into the prefecture's largest calligraphy society, with some 130 chapters and around 2,000 members."),
+     dict(gen="Third generation", name="Taku Higano",
+          text="Representative director of Garyukai Co., Ltd. and third-generation head. A specialist in the ancient seal and clerical scripts; member of Nitten and standing director of the Yomiuri Shohokai. Beyond his own art, he brings Garyukai's calligraphy to society through commissions, performances and talks."),
+   ],
    readmore="Read Taku Higano's words in the Journal", back="Back to Journal"),
 }
 
@@ -375,6 +399,8 @@ def build_author(arts,lang):
           f'<div class="prof" style="margin-top:28px"><div class="photo" style="background-image:url(\'{eurl(AUTHOR_PHOTO)}\')"></div>'
           f'<div class="meta"><p style="margin:0;font-size:16px;line-height:2;color:var(--ink2)">{esc(d["bio"])}</p><div class="tags">{tg}</div></div></div>'
           f'<hr class="divider"><p class="lead" style="font-family:var(--mincho);font-size:clamp(19px,2.6vw,26px);line-height:1.7;border:none;padding:0;color:var(--ink)">「{esc(d["quote"])}」</p>'
+          f'<hr class="divider"><p class="eyebrow">{esc(d["lineage_head"])}</p>'
+          f'<div class="lineage">'+''.join(f'<div class="gen"><span class="gno">{esc(g["gen"])}</span><h3>{esc(g["name"])}</h3><p>{esc(g["text"])}</p></div>' for g in d["lineage"])+'</div>'
           f'<hr class="divider"><p class="eyebrow">{esc(d["readmore"])}</p><div class="cards">{cards}</div>{cta(lang)}'+FOOT)
     write(("about/higano-taku/index.html") if lang=="ja" else ("en/about/higano-taku/index.html"), page)
 
