@@ -145,7 +145,9 @@ def head(lang,title,desc,canonical,alt_ja,alt_en,ld_list,og_type="article",image
             f'<meta property="og:type" content="{og_type}"><meta property="og:title" content="{esc(title)}">'
             f'<meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}">'
             f'<meta property="og:image" content="{img}"><meta name="twitter:card" content="summary_large_image">'
-            f'<meta property="og:locale" content="{"ja_JP" if lang=="ja" else "en_US"}">\n'
+            f'<meta property="og:locale" content="{"ja_JP" if lang=="ja" else "en_US"}">'
+            f'<meta property="og:site_name" content="{"書道研究 臥龍会" if lang=="ja" else "Garyukai"}">\n'
+            f'<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">\n'
             f'{extra}'
             f'<link rel="icon" href="{BASE}/favicon.ico" sizes="any">'
             f'<link rel="icon" type="image/png" sizes="32x32" href="{BASE}/favicon-32.png">'
@@ -346,7 +348,7 @@ def build_article(a,lang):
         by=f'By <a href="{BASE}/en/about/higano-taku/">Taku Higano — third-generation head of Garyukai</a>'
         back="Back to Journal"
     h=head(lang,title,desc,url,alt_ja,alt_en,ld,image=img,extra=extra)
-    page=(h+f'<img class="eyecatch" src="{img}" alt="{esc(title)}" width="1200" height="600">'
+    page=(h+f'<img class="eyecatch" src="{img}" alt="{esc(title)}" width="1200" height="600" decoding="async" fetchpriority="high">'
           f'<p class="eyebrow">{esc(eyebrow)}</p><h1>{esc(title)}</h1>'
           f'<p class="byline">{by}</p>'
           + f'<p class="pubdate"><time datetime="{date}">{("公開 " if lang=="ja" else "Published ")}{disp_date(date)}</time></p>'
@@ -362,7 +364,7 @@ def card(a,lang,klass="card"):
     cat=a.get("category_"+lang,"") ; ex=a.get("excerpt_"+lang,"")
     img=eurl(a.get("eyecatch",""))
     iso=str(a.get('date',''))[:10]
-    return (f'<a class="{klass}" href="{url}"><img class="thumb" src="{img}" alt="{esc(title)}">'
+    return (f'<a class="{klass}" href="{url}"><img class="thumb" src="{img}" alt="{esc(title)}" loading="lazy" decoding="async" width="640" height="360">'
             f'<div class="body"><span class="k">{esc(cat)}</span><h3>{esc(title)}</h3>'
             f'<p>{esc(ex)}</p><time class="cdate" datetime="{iso}">{disp_date(iso)}</time></div></a>')
 
@@ -443,12 +445,25 @@ def inject_lp(arts):
 # ---------- sitemap ----------
 def build_sitemap(arts):
     today=datetime.date.today().isoformat()
-    urls=[BASE+"/",BASE+"/en/",BASE+"/journal/",BASE+"/en/journal/",
-          BASE+"/about/higano-taku/",BASE+"/en/about/higano-taku/"]
+    # (ja_url, en_url, lastmod) pairs — each pair emits both URLs with reciprocal hreflang alternates
+    pairs=[(BASE+"/",BASE+"/en/",today),
+           (BASE+"/journal/",BASE+"/en/journal/",today),
+           (BASE+"/about/higano-taku/",BASE+"/en/about/higano-taku/",today)]
     for a in arts:
-        urls.append(article_url(a["slug"],"ja")); urls.append(article_url(a["slug"],"en"))
-    body="".join(f"<url><loc>{u}</loc><lastmod>{today}</lastmod></url>" for u in urls)
-    xml='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+body+'</urlset>'
+        d=str(a.get("date",""))[:10] or today
+        pairs.append((article_url(a["slug"],"ja"),article_url(a["slug"],"en"),d))
+    def alts(ja,en):
+        return (f'<xhtml:link rel="alternate" hreflang="ja" href="{ja}"/>'
+                f'<xhtml:link rel="alternate" hreflang="en" href="{en}"/>'
+                f'<xhtml:link rel="alternate" hreflang="x-default" href="{ja}"/>')
+    rows=[]
+    for ja,en,d in pairs:
+        a=alts(ja,en)
+        rows.append(f'<url><loc>{ja}</loc><lastmod>{d}</lastmod>{a}</url>')
+        rows.append(f'<url><loc>{en}</loc><lastmod>{d}</lastmod>{a}</url>')
+    xml=('<?xml version="1.0" encoding="UTF-8"?>\n'
+         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+         'xmlns:xhtml="http://www.w3.org/1999/xhtml">'+"".join(rows)+'</urlset>')
     open(os.path.join(ROOT,"sitemap.xml"),"w",encoding="utf-8").write(xml)
 
 def _rfc822(d):
