@@ -1,7 +1,7 @@
 ---
 slug: kanji-origins
-title_ja: 漢字はどこから来たのか——象形文字のはなし
-title_en: Where Kanji Come From — The World of Pictographs
+title_ja: 漢字はどこから来たのか？　象形文字のはなし
+title_en: 'Where Kanji Come From: The World of Pictographs'
 category_ja: 書の基礎
 category_en: Primer
 date: '2026-10-14'

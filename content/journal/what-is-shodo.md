@@ -1,7 +1,7 @@
 ---
 slug: what-is-shodo
-title_ja: 書道とは何か——習字・カリグラフィーとの違い
-title_en: What Is Shodo? — And How It Differs from Penmanship and Calligraphy
+title_ja: 書道とは何か？　習字・カリグラフィーとの違い
+title_en: What Is Shodo? How It Differs from Penmanship and Calligraphy
 category_ja: 書の基礎
 category_en: Primer
 date: '2026-10-14'

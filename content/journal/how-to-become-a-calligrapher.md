@@ -1,6 +1,6 @@
 ---
-title_ja: 書道家になるには ——書で生きるということ
-title_en: How to Become a Calligrapher — and What It Means to Live by the Brush
+title_ja: 書道家になるには　書で生きるということ
+title_en: 'How to Become a Calligrapher: What It Means to Live by the Brush'
 category_ja: インタビュー
 category_en: Interview
 date: '2026-09-06'

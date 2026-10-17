@@ -1,5 +1,5 @@
 ---
-title_ja: 篆書・隷書 ——古代文字に惹かれて
+title_ja: 篆書・隷書　古代文字に惹かれて
 title_en: 'Seal & Clerical Script: The Allure of Japan''s Ancient Characters'
 category_ja: 古典
 category_en: Craft

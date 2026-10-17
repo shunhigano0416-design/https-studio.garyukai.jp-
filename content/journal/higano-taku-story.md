@@ -1,5 +1,5 @@
 ---
-title_ja: 三代目・日賀野 琢 ——「書は、生きる業」
+title_ja: 三代目・日賀野 琢　「書は、生きる業」
 title_en: 'Taku Higano: A Life Given to the Brush'
 category_ja: インタビュー
 category_en: Interview

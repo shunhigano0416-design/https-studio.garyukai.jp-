@@ -1,7 +1,7 @@
 ---
 slug: five-scripts
-title_ja: 五体入門——篆書・隷書・楷書・行書・草書
-title_en: The Five Scripts — Seal, Clerical, Standard, Semi-cursive, Cursive
+title_ja: 五体入門　篆書・隷書・楷書・行書・草書
+title_en: 'The Five Scripts: Seal, Clerical, Standard, Semi-cursive, Cursive'
 category_ja: 書の基礎
 category_en: Primer
 date: '2026-10-14'
