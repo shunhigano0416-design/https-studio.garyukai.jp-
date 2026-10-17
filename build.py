@@ -34,9 +34,9 @@ FONT_FACE = ('@font-face{font-family:"NameJP";src:url("/assets/fonts/NameJP.woff
              '.name-jp{font-family:"NameJP",var(--mincho)}')
 
 CSS_BODY = r'''
-:root{--paper:#f4f2ec;--paper2:#eae6db;--surface:#fffdf8;--ink:#14110b;--ink2:#574f42;--faint:#8f8676;--line:#d8cfbf;--line2:#ebe4d6;--shu:#b83521;--shu-deep:#8f2716;--shu-tint:#f4e7e2;--mincho:__MIN__;--gothic:__GO__;--sans:"Helvetica Neue",Arial,__GO__}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#100e0a;--paper2:#15110c;--surface:#191510;--ink:#efe8db;--ink2:#b7ae9d;--faint:#8a8172;--line:#2b261f;--line2:#231e18;--shu:#e0715a;--shu-deep:#c1543f;--shu-tint:#291c17}}
-:root[data-theme="dark"]{--paper:#100e0a;--paper2:#15110c;--surface:#191510;--ink:#efe8db;--ink2:#b7ae9d;--faint:#8a8172;--line:#2b261f;--line2:#231e18;--shu:#e0715a;--shu-deep:#c1543f;--shu-tint:#291c17}
+:root{--paper:#f4f2ec;--paper2:#eae6db;--surface:#fffdf8;--ink:#14110b;--ink2:#574f42;--faint:#8f8676;--line:#d8cfbf;--line2:#ebe4d6;--shu:#b83521;--shu-deep:#8f2716;--shu-tint:#f4e7e2;--mincho:__MIN__;--gothic:__GO__;--sans:"Helvetica Neue",Arial,__GO__;--shadow:0 1px 2px rgba(20,17,11,.03),0 18px 40px -26px rgba(20,17,11,.18);--shadow-h:0 3px 8px rgba(20,17,11,.05),0 30px 60px -28px rgba(20,17,11,.28)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#100e0a;--paper2:#15110c;--surface:#191510;--ink:#efe8db;--ink2:#b7ae9d;--faint:#8a8172;--line:#2b261f;--line2:#231e18;--shu:#e0715a;--shu-deep:#c1543f;--shu-tint:#291c17;--shadow:0 20px 44px -26px rgba(0,0,0,.72);--shadow-h:0 30px 60px -28px rgba(0,0,0,.88)}}
+:root[data-theme="dark"]{--paper:#100e0a;--paper2:#15110c;--surface:#191510;--ink:#efe8db;--ink2:#b7ae9d;--faint:#8a8172;--line:#2b261f;--line2:#231e18;--shu:#e0715a;--shu-deep:#c1543f;--shu-tint:#291c17;--shadow:0 20px 44px -26px rgba(0,0,0,.72);--shadow-h:0 30px 60px -28px rgba(0,0,0,.88)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--gothic);line-height:1.95;font-feature-settings:"palt" 1;-webkit-font-smoothing:antialiased;line-break:strict;word-break:auto-phrase}
 img{max-width:100%;display:block}a{color:inherit}
@@ -79,10 +79,12 @@ h1{font-family:var(--mincho);font-weight:800;font-size:clamp(28px,4.6vw,44px);li
 .cta p{margin:14px auto 0;max-width:48ch;color:var(--ink2);font-size:15px;line-height:1.95}
 .cta .btn{display:inline-block;margin-top:22px;background:var(--shu);color:#fff;text-decoration:none;font-family:var(--mincho);font-weight:800;letter-spacing:.06em;padding:15px 34px;transition:background .2s}
 .cta .btn:hover{background:var(--shu-deep)}
-.card{display:block;text-decoration:none;background:none;margin-top:26px;transition:opacity .2s}
-.card:hover{opacity:.72}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2.4vw,26px);margin-top:clamp(20px,3vw,30px)}
+@media(max-width:620px){.cards{grid-template-columns:1fr;gap:16px}}
+.card{display:flex;flex-direction:column;text-decoration:none;background:var(--surface);border:1px solid var(--line2);border-radius:3px;box-shadow:var(--shadow);overflow:hidden;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
 .card .thumb{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-.card .body{padding:14px 0 0}
+.card .body{padding:clamp(18px,2vw,22px)}
 .card .k{font-family:var(--mincho);font-weight:700;font-size:12px;letter-spacing:.06em;color:var(--shu)}
 .card h3{font-family:var(--mincho);font-weight:800;font-size:19px;margin:7px 0 0;color:var(--ink);line-height:1.4}
 .card p{margin:8px 0 0;font-size:14px;color:var(--ink2);line-height:1.8}
@@ -344,9 +346,9 @@ def build_hub(arts,lang):
     url=(BASE+"/journal/") if lang=="ja" else (BASE+"/en/journal/")
     alt_ja=BASE+"/journal/"; alt_en=BASE+"/en/journal/"
     if lang=="ja":
-        title="読み物 ——書家 日賀野琢に聞く | 臥龍会"
+        title="読み物　書家 日賀野琢に聞く | 臥龍会"
         desc="書道研究 臥龍会・三代目 日賀野琢へのインタビュー。書道とは何か、篆書・隷書の魅力、書道家として生きること。書の一次情報をお届けします。"
-        eyebrow="読み物"; h1="読み物 ——書家に聞く"; lead="臥龍会 三代目・日賀野琢の言葉で、書道の奥深さをお伝えします。"
+        eyebrow="読み物"; h1="読み物　書家に聞く"; lead="臥龍会 三代目・日賀野琢の言葉で、書道の奥深さをお伝えします。"
     else:
         title="Journal — In the Words of Taku Higano | Garyukai"
         desc="Interviews with Taku Higano, third-generation head of the Garyukai calligraphy institute: what shodo is, the allure of seal and clerical script, and a life lived by the brush."
@@ -358,7 +360,7 @@ def build_hub(arts,lang):
     cards="".join(card(a,lang) for a in arts)
     h=head(lang,title,desc,url,alt_ja,alt_en,ld,og_type="website")
     page=(h+f'<p class="eyebrow">{esc(eyebrow)}</p><h1>{esc(h1)}</h1><p class="lead">{esc(lead)}</p>'
-          f'<div style="margin-top:8px">{cards}</div>{cta(lang)}'+FOOT)
+          f'<div class="cards">{cards}</div>{cta(lang)}'+FOOT)
     write(("journal/index.html") if lang=="ja" else ("en/journal/index.html"), page)
 
 def build_author(arts,lang):
@@ -373,7 +375,7 @@ def build_author(arts,lang):
           f'<div class="prof" style="margin-top:28px"><div class="photo" style="background-image:url(\'{eurl(AUTHOR_PHOTO)}\')"></div>'
           f'<div class="meta"><p style="margin:0;font-size:16px;line-height:2;color:var(--ink2)">{esc(d["bio"])}</p><div class="tags">{tg}</div></div></div>'
           f'<hr class="divider"><p class="lead" style="font-family:var(--mincho);font-size:clamp(19px,2.6vw,26px);line-height:1.7;border:none;padding:0;color:var(--ink)">「{esc(d["quote"])}」</p>'
-          f'<hr class="divider"><p class="eyebrow">{esc(d["readmore"])}</p>{cards}{cta(lang)}'+FOOT)
+          f'<hr class="divider"><p class="eyebrow">{esc(d["readmore"])}</p><div class="cards">{cards}</div>{cta(lang)}'+FOOT)
     write(("about/higano-taku/index.html") if lang=="ja" else ("en/about/higano-taku/index.html"), page)
 
 # ---------- LP featured cards injection ----------
