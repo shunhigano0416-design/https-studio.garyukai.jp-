@@ -11,41 +11,46 @@
 
   <!-- 1 : 1940 -->
   <circle cx="130" cy="250" r="6.5" fill="#b83521"/>
-  <text x="130" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">1940</text>
-  <text x="130" y="292" text-anchor="middle" font-size="24" fill="#574f42">臥龍会 創立<tspan x="130" dy="30">「臥龍」創刊</tspan></text>
+  <text x="130" y="228" text-anchor="middle" font-size="34" font-weight="700" fill="#14110b">1940</text>
+  <text x="130" y="292" text-anchor="middle" font-size="22" fill="#574f42">臥龍会 創立<tspan x="130" dy="28">「臥龍」創刊</tspan></text>
 
   <!-- 2 : 1947 -->
-  <circle cx="307" cy="250" r="6.5" fill="#b83521"/>
-  <text x="307" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">1947</text>
-  <text x="307" y="292" text-anchor="middle" font-size="24" fill="#574f42">栃木県書道連盟<tspan x="307" dy="30">結成</tspan></text>
+  <circle cx="285" cy="250" r="6.5" fill="#b83521"/>
+  <text x="285" y="228" text-anchor="middle" font-size="34" font-weight="700" fill="#14110b">1947</text>
+  <text x="285" y="292" text-anchor="middle" font-size="22" fill="#574f42">栃木県<tspan x="285" dy="28">書道連盟結成</tspan></text>
 
   <!-- 3 : 1961 -->
-  <circle cx="484" cy="250" r="6.5" fill="#b83521"/>
-  <text x="484" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">1961</text>
-  <text x="484" y="292" text-anchor="middle" font-size="24" fill="#574f42">二代・日賀野溥<tspan x="484" dy="30">継承</tspan></text>
+  <circle cx="440" cy="250" r="6.5" fill="#b83521"/>
+  <text x="440" y="228" text-anchor="middle" font-size="34" font-weight="700" fill="#14110b">1961</text>
+  <text x="440" y="292" text-anchor="middle" font-size="22" fill="#574f42">二代・日賀野溥<tspan x="440" dy="28">継承</tspan></text>
 
   <!-- 4 : 1990 -->
-  <circle cx="661" cy="250" r="6.5" fill="#b83521"/>
-  <text x="661" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">1990</text>
-  <text x="661" y="292" text-anchor="middle" font-size="24" fill="#574f42">創立五十周年</text>
+  <circle cx="595" cy="250" r="6.5" fill="#b83521"/>
+  <text x="595" y="228" text-anchor="middle" font-size="34" font-weight="700" fill="#14110b">1990</text>
+  <text x="595" y="292" text-anchor="middle" font-size="22" fill="#574f42">創立五十周年</text>
 
-  <!-- 5 : 2010 -->
-  <circle cx="838" cy="250" r="6.5" fill="#b83521"/>
-  <text x="838" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">2010</text>
-  <text x="838" y="292" text-anchor="middle" font-size="24" fill="#574f42">創立七十周年</text>
+  <!-- 5 : 2000 -->
+  <circle cx="750" cy="250" r="6.5" fill="#b83521"/>
+  <text x="750" y="228" text-anchor="middle" font-size="34" font-weight="700" fill="#14110b">2000</text>
+  <text x="750" y="292" text-anchor="middle" font-size="22" fill="#574f42">創立六十周年</text>
 
-  <!-- 6 : 2020 -->
-  <circle cx="1016" cy="250" r="6.5" fill="#b83521"/>
-  <text x="1016" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">2020</text>
-  <text x="1016" y="292" text-anchor="middle" font-size="24" fill="#574f42">創立八十周年</text>
+  <!-- 6 : 2010 -->
+  <circle cx="905" cy="250" r="6.5" fill="#b83521"/>
+  <text x="905" y="228" text-anchor="middle" font-size="34" font-weight="700" fill="#14110b">2010</text>
+  <text x="905" y="292" text-anchor="middle" font-size="22" fill="#574f42">創立七十周年</text>
 
-  <!-- 7 : 2024 -->
-  <circle cx="1193" cy="250" r="6.5" fill="#b83521"/>
-  <text x="1193" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">2024</text>
-  <text x="1193" y="292" text-anchor="middle" font-size="24" fill="#574f42">創立八十五周年</text>
+  <!-- 7 : 2020 -->
+  <circle cx="1060" cy="250" r="6.5" fill="#b83521"/>
+  <text x="1060" y="228" text-anchor="middle" font-size="34" font-weight="700" fill="#14110b">2020</text>
+  <text x="1060" y="292" text-anchor="middle" font-size="22" fill="#574f42">創立八十周年</text>
 
-  <!-- 8 : 現在 -->
+  <!-- 8 : 2024 -->
+  <circle cx="1215" cy="250" r="6.5" fill="#b83521"/>
+  <text x="1215" y="228" text-anchor="middle" font-size="34" font-weight="700" fill="#14110b">2024</text>
+  <text x="1215" y="292" text-anchor="middle" font-size="22" fill="#574f42">創立八十五周年</text>
+
+  <!-- 9 : 現在 -->
   <circle cx="1370" cy="250" r="8.5" fill="none" stroke="#b83521" stroke-width="2.5"/>
   <text x="1370" y="228" text-anchor="middle" font-size="26" font-weight="700" fill="#b83521">現在</text>
-  <text x="1370" y="292" text-anchor="middle" font-size="24" fill="#574f42">三代・日賀野琢<tspan x="1370" dy="30">へ</tspan></text>
+  <text x="1370" y="292" text-anchor="middle" font-size="22" fill="#574f42">三代・琢へ</text>
 </svg>
