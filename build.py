@@ -94,6 +94,9 @@ h1{font-family:var(--mincho);font-weight:800;font-size:clamp(28px,4.6vw,44px);li
 .lineage .gno{font-family:var(--mincho);font-weight:700;font-size:12.5px;letter-spacing:.12em;color:var(--shu)}
 .lineage .gen h3{font-family:var(--mincho);font-weight:800;font-size:clamp(19px,2.2vw,23px);margin:6px 0 0;color:var(--ink);line-height:1.4}
 .lineage .gen p{margin:9px 0 0;font-size:15px;line-height:1.95;color:var(--ink2)}
+.lineage-more{margin:22px 0 0}
+.lineage-more a{font-family:var(--mincho);font-weight:800;font-size:15px;letter-spacing:.04em;color:var(--shu);text-decoration:none}
+.lineage-more a:hover{color:var(--shu-deep)}
 .prof{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start}
 .prof .photo{width:210px;aspect-ratio:4/5;background-size:cover;background-position:center top;flex:none}
 .prof .meta{flex:1;min-width:240px}
@@ -277,6 +280,7 @@ AUTHOR={
      dict(gen="三代", name="日賀野 琢（たく）",
           text="有限会社臥龍会 代表取締役／臥龍会 三代目。古代文字（篆書・隷書）を専門とし、日展会員・読売書法会 常任理事ほかを務める。作家活動に加え、企業の作品制作・揮毫・講演を通じて臥龍会の書を社会へ広げている。"),
    ],
+   lineage_more="系譜の物語をさらに詳しく　臥龍会 八十五年の歩み →",
    readmore="読み物で、日賀野琢の言葉を読む", back="読み物一覧へ戻る"),
  "en":dict(title="Taku Higano: Calligrapher, Third Generation of Garyukai",
    desc="Taku Higano is a Japanese calligrapher and the third-generation head of the Garyukai calligraphy institute. A specialist in seal and clerical script; member of Nitten and standing director of the Yomiuri Shohokai. He continues the Garyukai lineage of Tōka Higano (founder) and Hiroshi Higano.",
@@ -293,6 +297,7 @@ AUTHOR={
      dict(gen="Third generation", name="Taku Higano",
           text="Representative director of Garyukai Co., Ltd. and third-generation head. A specialist in the ancient seal and clerical scripts; member of Nitten and standing director of the Yomiuri Shohokai. Beyond his own art, he brings Garyukai's calligraphy to society through commissions, performances and talks."),
    ],
+   lineage_more="The fuller story — Eighty-Five Years of Garyukai →",
    readmore="Read Taku Higano's words in the Journal", back="Back to Journal"),
 }
 
@@ -403,6 +408,7 @@ def build_author(arts,lang):
           f'<hr class="divider"><p class="lead" style="font-family:var(--mincho);font-size:clamp(19px,2.6vw,26px);line-height:1.7;border:none;padding:0;color:var(--ink)">「{esc(d["quote"])}」</p>'
           f'<hr class="divider"><p class="eyebrow">{esc(d["lineage_head"])}</p>'
           f'<div class="lineage">'+''.join(f'<div class="gen"><span class="gno">{esc(g["gen"])}</span><h3>{esc(g["name"])}</h3><p>{esc(g["text"])}</p></div>' for g in d["lineage"])+'</div>'
+          f'<p class="lineage-more"><a href="{article_url("garyukai-85-years",lang)}">{esc(d["lineage_more"])}</a></p>'
           f'<hr class="divider"><p class="eyebrow">{esc(d["readmore"])}</p><div class="cards">{cards}</div>{cta(lang)}'+FOOT)
     write(("about/higano-taku/index.html") if lang=="ja" else ("en/about/higano-taku/index.html"), page)
 

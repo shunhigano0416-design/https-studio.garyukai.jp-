@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 400" font-family="&quot;Shippori Mincho&quot;,&quot;Yu Mincho&quot;,&quot;Hiragino Mincho ProN&quot;,serif">
+  <rect width="1500" height="400" fill="#f4f2ec"/>
+
+  <!-- title -->
+  <text x="70" y="74" font-size="36" font-weight="700" fill="#14110b" letter-spacing="2">臥龍会 八十五年の歩み</text>
+  <text x="72" y="104" font-size="16" fill="#b83521" letter-spacing="5">年表　一九四〇 – 二〇二四</text>
+  <line x1="70" y1="128" x2="1430" y2="128" stroke="#d8cfbf" stroke-width="1.5"/>
+
+  <!-- spine -->
+  <line x1="100" y1="250" x2="1400" y2="250" stroke="#d8cfbf" stroke-width="2"/>
+
+  <!-- 1 : 1940 -->
+  <circle cx="130" cy="250" r="6.5" fill="#b83521"/>
+  <text x="130" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">1940</text>
+  <text x="130" y="292" text-anchor="middle" font-size="24" fill="#574f42">臥龍会 創立<tspan x="130" dy="30">「臥龍」創刊</tspan></text>
+
+  <!-- 2 : 1947 -->
+  <circle cx="307" cy="250" r="6.5" fill="#b83521"/>
+  <text x="307" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">1947</text>
+  <text x="307" y="292" text-anchor="middle" font-size="24" fill="#574f42">栃木県書道連盟<tspan x="307" dy="30">結成</tspan></text>
+
+  <!-- 3 : 1961 -->
+  <circle cx="484" cy="250" r="6.5" fill="#b83521"/>
+  <text x="484" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">1961</text>
+  <text x="484" y="292" text-anchor="middle" font-size="24" fill="#574f42">二代・日賀野溥<tspan x="484" dy="30">継承</tspan></text>
+
+  <!-- 4 : 1990 -->
+  <circle cx="661" cy="250" r="6.5" fill="#b83521"/>
+  <text x="661" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">1990</text>
+  <text x="661" y="292" text-anchor="middle" font-size="24" fill="#574f42">創立五十周年</text>
+
+  <!-- 5 : 2010 -->
+  <circle cx="838" cy="250" r="6.5" fill="#b83521"/>
+  <text x="838" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">2010</text>
+  <text x="838" y="292" text-anchor="middle" font-size="24" fill="#574f42">創立七十周年</text>
+
+  <!-- 6 : 2020 -->
+  <circle cx="1016" cy="250" r="6.5" fill="#b83521"/>
+  <text x="1016" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">2020</text>
+  <text x="1016" y="292" text-anchor="middle" font-size="24" fill="#574f42">創立八十周年</text>
+
+  <!-- 7 : 2024 -->
+  <circle cx="1193" cy="250" r="6.5" fill="#b83521"/>
+  <text x="1193" y="228" text-anchor="middle" font-size="36" font-weight="700" fill="#14110b">2024</text>
+  <text x="1193" y="292" text-anchor="middle" font-size="24" fill="#574f42">創立八十五周年</text>
+
+  <!-- 8 : 現在 -->
+  <circle cx="1370" cy="250" r="8.5" fill="none" stroke="#b83521" stroke-width="2.5"/>
+  <text x="1370" y="228" text-anchor="middle" font-size="26" font-weight="700" fill="#b83521">現在</text>
+  <text x="1370" y="292" text-anchor="middle" font-size="24" fill="#574f42">三代・日賀野琢<tspan x="1370" dy="30">へ</tspan></text>
+</svg>
