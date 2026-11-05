@@ -40,7 +40,7 @@ body_ja: '## 書道を始めたのはいつ、どんなきっかけでしたか�
   ## あなたにとって「書」とは、一言で言うと何ですか。
 
 
-  一言でいえば「生きる業（ぎょう）」。生きていくためのすべての根源であり、それを取ったら何も残らない——そういうものです。
+  一言でいえば「生きる業（なりわい）」。生きていくためのすべての根源であり、それを取ったら何も残らない——そういうものです。
 
 
   ## 書道の一番の魅力・面白さは、どこにありますか。
@@ -58,7 +58,7 @@ body_ja: '## 書道を始めたのはいつ、どんなきっかけでしたか�
   ## 影響を受けた書家・古典・作品を教えてください。
 
 
-  まず書家としては、大学入学時に入門した伊藤先生。同じ高校の出身と分かり、入学と同時にお稽古に入門しました。ただ大学院修了までの7年ほどしか習えず、先生が亡くなり、その後は今の新井幸夫先生のもとで、もう30〜40年近くお世話になっています。この二人は同じ西川寧（にしかわ やすし）先生の同門で、性格も雰囲気も全く違いますが、多くを学ばせてもらいました。古典では、先ほどの「祭姪文稿」のほか、石に彫った拓本ではなく、紙のなかった時代の木簡・竹簡の字——有名人の書ではないけれど、その頃の生の書きぶりがよくわかり、常々見て刺激を受けています。
+  まず書家としては、大学入学時に入門した伊藤先生。同じ高校の出身と分かり、入学と同時にお稽古に入門しました。ただ大学院修了までの7年ほどしか習えず、先生が亡くなり、その後は今の新井幸夫先生のもとで、もう30〜40年近くお世話になっています。この二人は同じ西川寧（にしかわ やすし）先生の同門で、性格も雰囲気も全く違いますが、多くを学ばせてもらいました。古典では、石に彫った拓本ではなく、紙のなかった時代の木簡・竹簡の字——有名人の書ではないけれど、その頃の生の書きぶりがよくわかり、常々見て刺激を受けています。
 
 
   ## 毎日の稽古・ルーティンは、どんなものですか。
@@ -70,7 +70,7 @@ body_ja: '## 書道を始めたのはいつ、どんなきっかけでしたか�
   ## 日展会員・読売書法会 常任理事として、大切にしていることは。
 
 
-  書団の枠組みや役職は、「よくここまでやってきたな」と改めて思います。大切にしているのは、その組織にいる以上「こういう立場の人が書いている」と見られるので、失敗ができない、ある程度の水準の作品を書かなければならない、という思い。そこが一番つらく、苦痛でもあります。ただ役職うんぬんではなく、60を過ぎた今、自分にしかできない表現——他から見ればまだ師匠と同じと言われても、自分らしさ——を必死に求めています。会員・常任理事といった肩書きがつくことは、それだけの責任を伴う。それを常々感じています。
+  書壇の枠組みや役職は、「よくここまでやってきたな」と改めて思います。大切にしているのは、その組織にいる以上「こういう立場の人が書いている」と見られるので、失敗ができない、ある程度の水準の作品を書かなければならない、という思い。そこが一番つらく、苦痛でもあります。ただ役職うんぬんではなく、60を過ぎた今、自分にしかできない表現——他から見ればまだ師匠と同じと言われても、自分らしさ——を必死に求めています。会員・常任理事といった肩書きがつくことは、それだけの責任を伴う。それを常々感じています。
 
 
   ## 活動の転機になった出来事や受賞はありますか。
@@ -104,7 +104,7 @@ body_en: '## When and how did you begin practicing shodo (Japanese calligraphy)?
   ## In a single word, what is calligraphy to you?
 
 
-  In a single word: my life’s work — ikiru gyo. It is the very root of living for me; take it away, and nothing would remain.
+  In a single word: my life’s work — ikiru nariwai. It is the very root of living for me; take it away, and nothing would remain.
 
 
   ## What is the greatest appeal — the true joy — of Japanese calligraphy?
@@ -122,7 +122,7 @@ body_en: '## When and how did you begin practicing shodo (Japanese calligraphy)?
   ## Which calligraphers, classics, or works have most influenced you?
 
 
-  As for calligraphers: first, the teacher under whom I entered upon starting university, Mr. Ito. We found we were from the same high school, and I became his pupil the moment I enrolled. Yet I could study with him only some seven years, until my graduate work ended, before he passed; since then I have been with my present teacher, Arai Yukio, for close to thirty or forty years. The two came from the same lineage under Master Nishikawa Yasushi — utterly different in character and air — and I learned a great deal from both. Among the classics, beyond the Sai-tetsu Bunko, I am drawn less to rubbings carved in stone than to the characters on wooden and bamboo slips from the age before paper: not the writing of famous names, but living brushwork of the time, which I study constantly for inspiration.
+  As for calligraphers: first, the teacher under whom I entered upon starting university, Mr. Ito. We found we were from the same high school, and I became his pupil the moment I enrolled. Yet I could study with him only some seven years, until my graduate work ended, before he passed; since then I have been with my present teacher, Arai Yukio, for close to thirty or forty years. The two came from the same lineage under Master Nishikawa Yasushi — utterly different in character and air — and I learned a great deal from both. Among the classics, I am drawn less to rubbings carved in stone than to the characters on wooden and bamboo slips from the age before paper: not the writing of famous names, but living brushwork of the time, which I study constantly for inspiration.
 
 
   ## What does your daily practice and routine look like?
