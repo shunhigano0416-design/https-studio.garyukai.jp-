@@ -22,9 +22,9 @@ body_ja: |
   ここは、報道に基づく事実です。
 
   - 文化庁は2026年11月5日、ユネスコの評価機関が「書道」の無形文化遺産への登録を勧告したと発表しました。現時点では「登録される見通し」であり、正式決定は政府間委員会を経て行われます。
-  - 正式決定の場は、11月30日から12月5日にかけて中国・福建省アモイ市で開かれるユネスコ政府間委員会です。
-  - 登録されれば、2024年の「伝統的酒造り」に続く、日本国内で24件目の無形文化遺産となります。
   - 背景として、2015年に書家らが「日本書道ユネスコ登録推進協議会」を設立。2021年には国の登録無形文化財の第一号として「書道」が「伝統的酒造り」とともに選ばれ、保持団体「日本書道文化協会」が発足しました。政府は2024年に登録を申請し、2025年に再申請していました。
+  - 登録されれば、2024年の「伝統的酒造り」に続く、日本国内で24件目の無形文化遺産となります。
+  - 正式決定の場は、11月30日から12月5日にかけて中国・福建省アモイ市で開かれるユネスコ政府間委員会です。
 
   出典：[毎日新聞（Yahoo!ニュース、2026年11月5日配信）](https://news.yahoo.co.jp/articles/967651db3f9678201e56da1409c2463c3fa552b4)
 
@@ -38,7 +38,7 @@ body_ja: |
 
   中央の華やかな書壇だけでなく、地方の小さな書道教室で筆を持つ一人ひとりにまで、書の楽しさを伝え、次の世代へ受け継いでいきたいと思っています。斯界の末端に居る者として、心して、その普及と伝承に努めてまいります。
 
-  単なるお祝いに終わらせることなく、地道な普及活動を、これからも一歩ずつ続けてまいります。書道人が一致協力して歩んでいくことこそ、何よりも大切だと考えています。」
+  単なるお祝いに終わらせることなく、地道な普及活動を、これからも一歩ずつ重ねていく所存です。書道人が一致協力して歩んでいくことこそ、何よりも大切だと考えています。」
 
   ## 臥龍会のこれから
 
@@ -51,9 +51,9 @@ body_en: |
   The following is based on news reports.
 
   - On 5 November 2026, the Agency for Cultural Affairs announced that a UNESCO advisory body had recommended Shodo for inscription as Intangible Cultural Heritage. At this stage it is "set to be inscribed"; the formal decision will be made by the intergovernmental committee.
-  - That committee is held from 30 November to 5 December in Xiamen, Fujian, China.
-  - If inscribed, Shodo would be Japan's 24th Intangible Cultural Heritage, following "traditional sake brewing" in 2024.
   - For background: in 2015 calligraphers established a council to promote UNESCO registration. In 2021 Shodo was selected, together with traditional sake brewing, as one of the first entries on Japan's register of Intangible Cultural Properties, and the Japan Shodo Culture Association was founded as its custodial body. The government applied for registration in 2024 and reapplied in 2025.
+  - If inscribed, Shodo would be Japan's 24th Intangible Cultural Heritage, following "traditional sake brewing" in 2024.
+  - That committee is held from 30 November to 5 December in Xiamen, Fujian, China.
 
   Source: [Mainichi Shimbun (via Yahoo! News, 5 November 2026)](https://news.yahoo.co.jp/articles/967651db3f9678201e56da1409c2463c3fa552b4)
 

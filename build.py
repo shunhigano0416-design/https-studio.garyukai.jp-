@@ -31,7 +31,7 @@ def disp_date(d):
 # ---------- fonts / css ----------
 _b64 = base64.b64encode(open(os.path.join(ROOT,"assets/fonts/NameJP.woff2"),"rb").read()).decode()
 FONT_FACE = ('@font-face{font-family:"NameJP";src:url("/assets/fonts/NameJP.woff2") format("woff2");font-display:swap}'
-             '.name-jp{font-family:"NameJP",var(--mincho)}')
+             '.name-jp{font-family:inherit}')
 
 CSS_BODY = r'''
 :root{--paper:#f4f2ec;--paper2:#eae6db;--surface:#fffdf8;--surface2:#f8f5ee;--ink:#14110b;--ink2:#574f42;--faint:#8f8676;--line:#d8cfbf;--line2:#ebe4d6;--shu:#b83521;--shu-deep:#8f2716;--shu-tint:#f4e7e2;--mincho:__MIN__;--gothic:__GO__;--sans:"Helvetica Neue",Arial,__GO__;--shadow:0 1px 2px rgba(20,17,11,.03),0 18px 40px -26px rgba(20,17,11,.18);--shadow-h:0 3px 8px rgba(20,17,11,.05),0 30px 60px -28px rgba(20,17,11,.28)}
