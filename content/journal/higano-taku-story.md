@@ -9,7 +9,7 @@ author: taku
 style: qa
 featured: true
 order: 1
-excerpt_ja: 書道研究 臥龍会 三代目・日賀野琢。八十余年続く書道会を継ぎ、篆書・隷書を専門とする書家が、自らの歩みと「書とは何か」を語ります。
+excerpt_ja: 書道研究 臥龍会 三代目・日賀野琢。80余年続く書道会を継ぎ、篆書・隷書を専門とする書家が、自らの歩みと「書とは何か」を語ります。
 excerpt_en: Taku Higano is the third-generation head of Garyukai, a Japanese calligraphy institute now in its ninth decade. A specialist in seal and clerical script, he speaks here of his path — and of what calligraphy truly is.
 desc_ja: 書道研究 臥龍会 三代目・日賀野琢が、書を始めた日から今日までの歩みと哲学を語る。墨の匂いに包まれた幼少期、三代目としての歩み、そして「書は生きる業」という信念。
 desc_en: Taku Higano, third-generation head of the Garyukai calligraphy institute, on his path and philosophy — from a childhood steeped in sumi ink to the conviction that calligraphy is his life's work.
@@ -70,7 +70,7 @@ body_ja: '## 書道を始めたのはいつ、どんなきっかけでしたか�
   ## 日展会員・読売書法会 常任理事として、大切にしていることは。
 
 
-  書団の枠組みや役職は、「よくここまでやってきたな」と改めて思います。大切にしているのは、その組織にいる以上「こういう立場の人が書いている」と見られるので、失敗ができない、ある程度の水準の作品を書かなければならない、という思い。そこが一番つらく、苦痛でもあります。ただ役職うんぬんではなく、六十を過ぎた今、自分にしかできない表現——他から見ればまだ師匠と同じと言われても、自分らしさ——を必死に求めています。会員・常任理事といった肩書きがつくことは、それだけの責任を伴う。それを常々感じています。
+  書団の枠組みや役職は、「よくここまでやってきたな」と改めて思います。大切にしているのは、その組織にいる以上「こういう立場の人が書いている」と見られるので、失敗ができない、ある程度の水準の作品を書かなければならない、という思い。そこが一番つらく、苦痛でもあります。ただ役職うんぬんではなく、60を過ぎた今、自分にしかできない表現——他から見ればまだ師匠と同じと言われても、自分らしさ——を必死に求めています。会員・常任理事といった肩書きがつくことは、それだけの責任を伴う。それを常々感じています。
 
 
   ## 活動の転機になった出来事や受賞はありますか。
