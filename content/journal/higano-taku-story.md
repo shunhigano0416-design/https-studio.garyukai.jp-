@@ -58,7 +58,7 @@ body_ja: '## 書道を始めたのはいつ、どんなきっかけでしたか�
   ## 影響を受けた書家・古典・作品を教えてください。
 
 
-  まず書家としては、大学入学時に入門した伊藤先生。同じ高校の出身と分かり、入学と同時にお稽古に入門しました。ただ大学院修了までの7年ほどしか習えず、先生が亡くなり、その後は今の新井幸夫先生のもとで、もう30〜40年近くお世話になっています。この二人は同じ西川寧（にしかわ やすし）先生の同門で、性格も雰囲気も全く違いますが、多くを学ばせてもらいました。古典では、石に彫った拓本ではなく、紙のなかった時代の木簡・竹簡の字——有名人の書ではないけれど、その頃の生の書きぶりがよくわかり、常々見て刺激を受けています。
+  まず書家としては、大学入学時に入門した伊藤先生。同じ高校の出身と分かり、入学と同時にお稽古に入門しました。ただ大学院修了までの7年ほどしか習えず、先生が亡くなり、その後は今の新井光風（あらい こうふう）先生のもとで、もう30〜40年近くお世話になっています。この二人は同じ西川寧（にしかわ やすし）先生の同門で、性格も雰囲気も全く違いますが、多くを学ばせてもらいました。古典では、石に彫った拓本ではなく、紙のなかった時代の木簡・竹簡の字——有名人の書ではないけれど、その頃の生の書きぶりがよくわかり、常々見て刺激を受けています。
 
 
   ## 毎日の稽古・ルーティンは、どんなものですか。
@@ -122,7 +122,7 @@ body_en: '## When and how did you begin practicing shodo (Japanese calligraphy)?
   ## Which calligraphers, classics, or works have most influenced you?
 
 
-  As for calligraphers: first, the teacher under whom I entered upon starting university, Mr. Ito. We found we were from the same high school, and I became his pupil the moment I enrolled. Yet I could study with him only some seven years, until my graduate work ended, before he passed; since then I have been with my present teacher, Arai Yukio, for close to thirty or forty years. The two came from the same lineage under Master Nishikawa Yasushi — utterly different in character and air — and I learned a great deal from both. Among the classics, I am drawn less to rubbings carved in stone than to the characters on wooden and bamboo slips from the age before paper: not the writing of famous names, but living brushwork of the time, which I study constantly for inspiration.
+  As for calligraphers: first, the teacher under whom I entered upon starting university, Mr. Ito. We found we were from the same high school, and I became his pupil the moment I enrolled. Yet I could study with him only some seven years, until my graduate work ended, before he passed; since then I have been with my present teacher, Arai Kōfū, for close to thirty or forty years. The two came from the same lineage under Master Nishikawa Yasushi — utterly different in character and air — and I learned a great deal from both. Among the classics, I am drawn less to rubbings carved in stone than to the characters on wooden and bamboo slips from the age before paper: not the writing of famous names, but living brushwork of the time, which I study constantly for inspiration.
 
 
   ## What does your daily practice and routine look like?
