@@ -1,6 +1,6 @@
 ---
 slug: kanji-origins
-title_ja: 漢字はどこから来たのか？　象形文字のはなし
+title_ja: 象形文字とは？　漢字のはじまりと成り立ちのはなし
 title_en: 'Where Kanji Come From: The World of Pictographs'
 category_ja: 書の基礎
 category_en: Primer
@@ -12,7 +12,7 @@ featured: false
 order: 6
 excerpt_ja: 漢字のはじまりは「象形文字」。太陽や月、山や川を線でかたどった文字が、どのように増え、五つの書体へと育っていったのか。
 excerpt_en: Kanji began as pictographs — the sun, the moon, mountains and rivers traced in line. How they multiplied, and grew into the five scripts.
-desc_ja: 漢字は象形文字からどう生まれ変化したのか。太陽・月・山・川の例から、康熙字典の五万字、篆・隷・楷・行・草の五体誕生まで、臥龍会 三代目・日賀野琢が解説します。
+desc_ja: 象形文字とは、目に見えるものの形を線でかたどった、漢字のはじまりの文字です。太陽・月・山・川の例から、漢字がどのように増え、篆・隷・楷・行・草の五体へ育ったのかまで、臥龍会 三代目・日賀野琢がやさしく解説します。
 desc_en: How did kanji evolve from pictographs? From sun, moon, mountain and river to the 50,000 characters of the Kangxi Dictionary and the five scripts — explained by Taku Higano of Garyukai.
 body_ja: '漢字のはじまりは「象形文字」——目に見える形を、線でかたどった文字です。実は漢字に限らず、古代文明の文字の多くは、身のまわりの物や天体、森羅万象を“絵”のように写すところから生まれました。
 

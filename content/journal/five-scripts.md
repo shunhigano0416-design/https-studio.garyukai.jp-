@@ -1,6 +1,6 @@
 ---
 slug: five-scripts
-title_ja: 五体入門　篆書・隷書・楷書・行書・草書
+title_ja: 漢字の五つの書体（五体）入門　篆書・隷書・楷書・行書・草書
 title_en: 'The Five Scripts: Seal, Clerical, Standard, Semi-cursive, Cursive'
 category_ja: 書の基礎
 category_en: Primer
@@ -12,7 +12,7 @@ featured: false
 order: 7
 excerpt_ja: 漢字には五つの書体があります。最古の篆書から、楷・行・草まで。意外に知られていない「生まれた順番」もあわせて、三代目がやさしく。
 excerpt_en: Kanji have five scripts, from the ancient seal script to standard, semi-cursive and cursive — including the surprising order in which they were born.
-desc_ja: 篆書・隷書・楷書・行書・草書——漢字の五体を入門解説。最古の篆書と小篆、篆額・篆刻に残る理由、そして楷・行・草の意外な誕生順を臥龍会 三代目・日賀野琢が語ります。
+desc_ja: 漢字の書体は五つ（五体）。篆書・隷書・楷書・行書・草書を入門解説します。最古の篆書と小篆、篆額・篆刻に残る理由、そして楷・行・草の意外な誕生順まで、臥龍会 三代目・日賀野琢がやさしく語ります。
 desc_en: An introduction to the five scripts of kanji — seal, clerical, standard, semi-cursive and cursive — including small seal script, why seal survives in seals and monument titles, and the surprising order of their birth.
 body_ja: '漢字には、五つの書体——「五体」があります。篆書（てんしょ）・隷書（れいしょ）・楷書（かいしょ）・行書（ぎょうしょ）・草書（そうしょ）。まずは、一番古い篆書から見ていきましょう。
 
