@@ -138,9 +138,11 @@ def head(lang,title,desc,canonical,alt_ja,alt_en,ld_list,og_type="article",image
     ld="\n".join('<script type="application/ld+json">'+json.dumps(x,ensure_ascii=False)+'</script>' for x in ld_list)
     img=image or OGP
     feed_title="臥龍会 読み物" if lang=="ja" else "Garyukai Journal"
+    brand="書道研究 臥龍会" if lang=="ja" else "Garyukai"
+    doc_title=title if ("臥龍会" in title or "Garyukai" in title) else f"{title}｜{brand}"
     return (f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8">'
             f'<meta name="viewport" content="width=device-width,initial-scale=1">\n'
-            f'<title>{esc(title)}</title>\n<meta name="description" content="{esc(desc)}">\n'
+            f'<title>{esc(doc_title)}</title>\n<meta name="description" content="{esc(desc)}">\n'
             f'<link rel="canonical" href="{canonical}">\n'
             f'<link rel="alternate" hreflang="ja" href="{alt_ja}"><link rel="alternate" hreflang="en" href="{alt_en}">'
             f'<link rel="alternate" hreflang="x-default" href="{alt_ja}">\n'
@@ -173,12 +175,14 @@ def person_ld(lang):
             "knowsAbout":["書道","篆書","隷書","古代文字","日本の伝統文化"] if lang=="ja" else ["Japanese calligraphy","seal script","clerical script","ancient Chinese characters","Japanese traditional culture"],
             "worksFor":{"@type":"Organization","name":"書道研究 臥龍会","url":BASE+"/"},
             "sameAs":["https://instagram.com/garyu_shodo","https://instagram.com/garyu_shodo_en"]}
-def article_ld(lang,title,desc,url,img,date):
-    return {"@context":"https://schema.org","@type":"Article","headline":title,"description":desc,
-            "inLanguage":lang,"datePublished":date,"dateModified":date,
-            "author":{"@type":"Person","name":"日賀野 琢" if lang=="ja" else "Taku Higano",
-                      "url":(BASE+"/about/higano-taku/") if lang=="ja" else (BASE+"/en/about/higano-taku/")},
-            "publisher":ORG,"mainEntityOfPage":url,"image":img,"articleSection":"Journal"}
+def article_ld(lang,title,desc,url,img,date,atype="Article",about=None,section="Journal"):
+    d={"@context":"https://schema.org","@type":atype,"headline":title,"description":desc,
+       "inLanguage":lang,"datePublished":date,"dateModified":date,
+       "author":{"@type":"Person","name":"日賀野 琢" if lang=="ja" else "Taku Higano",
+                 "url":(BASE+"/about/higano-taku/") if lang=="ja" else (BASE+"/en/about/higano-taku/")},
+       "publisher":ORG,"mainEntityOfPage":url,"image":img,"articleSection":section}
+    if about: d["about"]=about
+    return d
 
 # ---------- mini markdown ----------
 def _inline(t):
@@ -323,7 +327,7 @@ def breadcrumb_ld(items):
     return {"@context":"https://schema.org","@type":"BreadcrumbList",
             "itemListElement":[{"@type":"ListItem","position":i+1,"name":n,"item":u} for i,(n,u) in enumerate(items)]}
 
-def build_article(a,lang):
+def build_article(a,lang,arts=None):
     slug=a["slug"]
     title=a["title_"+lang] or a.get("title_ja","")
     desc=(a.get("desc_"+lang) or a.get("excerpt_"+lang) or "")[:300]
@@ -333,7 +337,11 @@ def build_article(a,lang):
     url=article_url(slug,lang); alt_ja=article_url(slug,"ja"); alt_en=article_url(slug,"en")
     home=(BASE+"/") if lang=="ja" else (BASE+"/en/")
     hub_url=(BASE+"/journal/") if lang=="ja" else (BASE+"/en/journal/")
-    ld=[article_ld(lang,title,desc,url,img,date),
+    is_news=(a.get("category_ja")=="お知らせ")
+    atype="NewsArticle" if is_news else "Article"
+    about=[{"@type":"Thing","name":"書道" if lang=="ja" else "Japanese calligraphy"}]
+    if is_news: about.append({"@type":"Thing","name":"ユネスコ無形文化遺産" if lang=="ja" else "UNESCO Intangible Cultural Heritage"})
+    ld=[article_ld(lang,title,desc,url,img,date,atype=atype,about=about,section=section),
         breadcrumb_ld([("臥龍会" if lang=="ja" else "Garyukai",home),
                        ("読み物" if lang=="ja" else "Journal",hub_url),(title,url)])]
     extra=(f'<meta property="article:published_time" content="{date}">'
@@ -352,13 +360,26 @@ def build_article(a,lang):
     else:
         by=f'By <a href="{BASE}/en/about/higano-taku/">Taku Higano — third-generation head of Garyukai</a>'
         back="Back to Journal"
+    # related reading (same category first, then newest others) — internal links
+    rel_html=""
+    if arts:
+        rest=[x for x in arts if x["slug"]!=slug]
+        same=[x for x in rest if x.get("category_ja")==a.get("category_ja")]
+        other=[x for x in rest if x.get("category_ja")!=a.get("category_ja")]
+        dkey=lambda x:(str(x.get("date","")), -x.get("order",999))
+        same.sort(key=dkey,reverse=True); other.sort(key=dkey,reverse=True)
+        picked=(same+other)[:2]
+        if picked:
+            rtitle="関連する読み物" if lang=="ja" else "Related reading"
+            rel_html=(f'<hr class="divider"><p class="eyebrow">{rtitle}</p>'
+                      f'<div class="cards">'+"".join(card(x,lang) for x in picked)+'</div>')
     h=head(lang,title,desc,url,alt_ja,alt_en,ld,image=img,extra=extra)
     page=(h+f'<img class="eyecatch" src="{img}" alt="{esc(title)}" width="1200" height="600" decoding="async" fetchpriority="high">'
           f'<p class="eyebrow">{esc(eyebrow)}</p><h1>{esc(title)}</h1>'
           f'<p class="byline">{by}</p>'
           + f'<p class="pubdate"><time datetime="{date}">{("公開 " if lang=="ja" else "Published ")}{disp_date(date)}</time></p>'
           + (f'<p class="lead">{esc(lead)}</p>' if lead else '')
-          + body + cta(lang)
+          + body + rel_html + cta(lang)
           + f'<a class="backlink" href="{BASE}/{"en/" if lang=="en" else ""}journal/">← {back}</a>'
           + FOOT)
     write(f'{"en/" if lang=="en" else ""}journal/{slug}/index.html', page)
@@ -505,7 +526,7 @@ def main():
     arts=load_articles()
     print(f"Loaded {len(arts)} articles:", ", ".join(a["slug"] for a in arts))
     for a in arts:
-        build_article(a,"ja"); build_article(a,"en")
+        build_article(a,"ja",arts); build_article(a,"en",arts)
     build_hub(arts,"ja"); build_hub(arts,"en")
     build_author(arts,"ja"); build_author(arts,"en")
     build_sitemap(arts)
