@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 860" width="1000" height="860" font-family="&quot;Shippori Mincho&quot;,&quot;Yu Mincho&quot;,&quot;Hiragino Mincho ProN&quot;,serif">
+  <rect width="1000" height="860" fill="#f4f2ec"/>
+
+  <!-- title -->
+  <text x="70" y="80" font-size="34" font-weight="700" fill="#14110b" letter-spacing="2">五つの書体と、生まれた順番</text>
+  <text x="72" y="114" font-size="16" fill="#b83521" letter-spacing="3">篆　→　隷　→　草　→　行　→　楷　　楷書は最後に整った</text>
+  <line x1="70" y1="140" x2="930" y2="140" stroke="#d8cfbf" stroke-width="1.5"/>
+
+  <!-- rows -->
+  <!-- row 1 篆書 -->
+  <text x="92" y="214" text-anchor="middle" font-size="22" fill="#b83521" letter-spacing="1">01</text>
+  <text x="150" y="230" font-size="46" font-weight="800" fill="#14110b">篆書</text>
+  <text x="290" y="202" font-size="18" fill="#8f8676">てんしょ</text>
+  <text x="290" y="232" font-size="21" fill="#574f42">五体で最も古い。象形の面影を残す</text>
+
+  <!-- row 2 隷書 -->
+  <text x="92" y="334" text-anchor="middle" font-size="22" fill="#b83521" letter-spacing="1">02</text>
+  <text x="150" y="350" font-size="46" font-weight="800" fill="#14110b">隷書</text>
+  <text x="290" y="322" font-size="18" fill="#8f8676">れいしょ</text>
+  <text x="290" y="352" font-size="21" fill="#574f42">篆書を簡略化。日常の書として広まる</text>
+
+  <!-- row 3 草書 -->
+  <text x="92" y="454" text-anchor="middle" font-size="22" fill="#b83521" letter-spacing="1">03</text>
+  <text x="150" y="470" font-size="46" font-weight="800" fill="#14110b">草書</text>
+  <text x="290" y="442" font-size="18" fill="#8f8676">そうしょ</text>
+  <text x="290" y="472" font-size="21" fill="#574f42">隷書を速く崩して。楷・行・草で最初に誕生</text>
+
+  <!-- row 4 行書 -->
+  <text x="92" y="574" text-anchor="middle" font-size="22" fill="#b83521" letter-spacing="1">04</text>
+  <text x="150" y="590" font-size="46" font-weight="800" fill="#14110b">行書</text>
+  <text x="290" y="562" font-size="18" fill="#8f8676">ぎょうしょ</text>
+  <text x="290" y="592" font-size="21" fill="#574f42">草書のあとに。楷書と草書の中間の速さ</text>
+
+  <!-- row 5 楷書 -->
+  <text x="92" y="694" text-anchor="middle" font-size="22" fill="#b83521" letter-spacing="1">05</text>
+  <text x="150" y="710" font-size="46" font-weight="800" fill="#14110b">楷書</text>
+  <text x="290" y="682" font-size="18" fill="#8f8676">かいしょ</text>
+  <text x="290" y="712" font-size="21" fill="#574f42">一点一画が明快。最後に整えられた正式体</text>
+
+  <!-- insight -->
+  <line x1="70" y1="762" x2="930" y2="762" stroke="#d8cfbf" stroke-width="1.5"/>
+  <text x="70" y="800" font-size="16" fill="#b83521" letter-spacing="2">意外な順番</text>
+  <text x="70" y="828" font-size="19" fill="#574f42">私たちは楷書から学ぶので「くずして行書・草書になる」と感じますが、歴史は逆。</text>
+
+  <!-- AI note -->
+  <text x="930" y="846" text-anchor="end" font-size="14" fill="#a89f8e" letter-spacing="1">※ イメージ図（AIによる作成）</text>
+</svg>

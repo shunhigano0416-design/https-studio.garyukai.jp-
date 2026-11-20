@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="1000" height="800" font-family="&quot;Shippori Mincho&quot;,&quot;Yu Mincho&quot;,&quot;Hiragino Mincho ProN&quot;,serif">
+  <rect width="1000" height="800" fill="#f4f2ec"/>
+
+  <!-- title -->
+  <text x="70" y="78" font-size="32" font-weight="700" fill="#14110b" letter-spacing="2">「うまい字」と「良い字」は、どう違う？</text>
+  <text x="72" y="110" font-size="16" fill="#b83521" letter-spacing="3">巧拙（技術）　×　美醜（美しさ）の、かけ合わせ</text>
+  <line x1="70" y1="136" x2="930" y2="136" stroke="#d8cfbf" stroke-width="1.5"/>
+
+  <!-- 良い字 band (beauty side) -->
+  <ellipse cx="500" cy="300" rx="330" ry="118" fill="#b83521" opacity="0.07"/>
+
+  <!-- axes -->
+  <g stroke="#c9bfac" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <line x1="150" y1="470" x2="862" y2="470"/>
+    <line x1="500" y1="214" x2="500" y2="676"/>
+  </g>
+  <!-- arrow heads -->
+  <path d="M862,470 l-13,-7 0,14 z" fill="#c9bfac"/>
+  <path d="M500,214 l-7,13 14,0 z" fill="#c9bfac"/>
+
+  <!-- axis end labels -->
+  <text x="500" y="196" text-anchor="middle" font-size="18" fill="#574f42">美しい・心を動かす</text>
+  <text x="500" y="706" text-anchor="middle" font-size="15" fill="#9a9080">技巧のみ</text>
+  <text x="840" y="500" text-anchor="middle" font-size="17" fill="#574f42">巧み（技術 高）</text>
+  <text x="178" y="500" text-anchor="middle" font-size="17" fill="#574f42">拙い</text>
+
+  <!-- 良い字 label -->
+  <text x="500" y="262" text-anchor="middle" font-size="27" font-weight="800" fill="#b83521" letter-spacing="2">良い字</text>
+  <text x="500" y="292" text-anchor="middle" font-size="16" fill="#b83521">＝　美しい字</text>
+
+  <!-- 拙×美 insight marker (upper-left) -->
+  <circle cx="330" cy="360" r="7" fill="#b83521"/>
+  <text x="330" y="392" text-anchor="middle" font-size="15" fill="#7a2318">技術が拙くても、</text>
+  <text x="330" y="414" text-anchor="middle" font-size="15" fill="#7a2318">自分をさらけ出せば「良い字」</text>
+
+  <!-- うまい字 point (skilled but less moving) -->
+  <circle cx="690" cy="560" r="7" fill="#14110b"/>
+  <text x="690" y="592" text-anchor="middle" font-size="18" fill="#14110b">うまい字（技術偏重）</text>
+  <text x="690" y="615" text-anchor="middle" font-size="15" fill="#8f8676">巧いが、感動は薄いことも</text>
+
+  <!-- footer insight -->
+  <line x1="70" y1="742" x2="930" y2="742" stroke="#d8cfbf" stroke-width="1.5"/>
+  <text x="70" y="780" font-size="18" fill="#574f42">書道の古典にも、拙くても美しい「良い字」は、数多く残っています。</text>
+
+  <!-- AI note -->
+  <text x="930" y="790" text-anchor="end" font-size="14" fill="#a89f8e" letter-spacing="1">※ イメージ図（AIによる作成）</text>
+</svg>
