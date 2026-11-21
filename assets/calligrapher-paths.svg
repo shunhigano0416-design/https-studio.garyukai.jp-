@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 740" width="1000" height="740" font-family="&quot;Shippori Mincho&quot;,&quot;Yu Mincho&quot;,&quot;Hiragino Mincho ProN&quot;,serif">
+  <rect width="1000" height="740" fill="#f4f2ec"/>
+
+  <!-- title -->
+  <text x="70" y="80" font-size="34" font-weight="700" fill="#14110b" letter-spacing="2">書で生きる、主な道</text>
+  <text x="72" y="114" font-size="16" fill="#b83521" letter-spacing="3">「書家」に免許はない。始めるのは、いつでも</text>
+  <line x1="70" y1="140" x2="930" y2="140" stroke="#d8cfbf" stroke-width="1.5"/>
+
+  <!-- row 1 -->
+  <circle cx="92" cy="214" r="7" fill="#b83521"/>
+  <text x="150" y="228" font-size="34" font-weight="800" fill="#14110b">書道教員</text>
+  <text x="410" y="222" font-size="20" fill="#574f42">学校に勤める道</text>
+
+  <!-- row 2 -->
+  <circle cx="92" cy="334" r="7" fill="#b83521"/>
+  <text x="150" y="348" font-size="34" font-weight="800" fill="#14110b">教えるプロ</text>
+  <text x="410" y="342" font-size="20" fill="#574f42">学んだものを、人に教える（教室・レッスン）</text>
+
+  <!-- row 3 -->
+  <circle cx="92" cy="454" r="7" fill="#b83521"/>
+  <text x="150" y="468" font-size="34" font-weight="800" fill="#14110b">作品を売る</text>
+  <text x="410" y="462" font-size="20" fill="#574f42">画家・陶芸家のように。今の時代は難しい</text>
+
+  <!-- row 4 -->
+  <circle cx="92" cy="574" r="7" fill="#b83521"/>
+  <text x="150" y="588" font-size="34" font-weight="800" fill="#14110b">筆耕</text>
+  <text x="258" y="564" font-size="15" fill="#8f8676">ひっこう</text>
+  <text x="410" y="582" font-size="20" fill="#574f42">宛名書き・熨斗袋など。PCの普及で減りつつある</text>
+
+  <!-- footer insight -->
+  <line x1="70" y1="642" x2="930" y2="642" stroke="#d8cfbf" stroke-width="1.5"/>
+  <text x="70" y="680" font-size="16" fill="#b83521" letter-spacing="2">どの道も、共通して</text>
+  <text x="70" y="710" font-size="19" fill="#574f42">人に教えるには、自分が学び続けること。それだけは欠かせません。</text>
+
+  <!-- AI note -->
+  <text x="930" y="726" text-anchor="end" font-size="14" fill="#a89f8e" letter-spacing="1">※ イメージ図（AIによる作成）</text>
+</svg>

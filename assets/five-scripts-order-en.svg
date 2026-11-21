@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 860" width="1000" height="860" font-family="Georgia,&quot;Shippori Mincho&quot;,&quot;Hiragino Mincho ProN&quot;,serif">
+  <rect width="1000" height="860" fill="#f4f2ec"/>
+
+  <!-- title -->
+  <text x="70" y="80" font-size="34" font-weight="700" fill="#14110b" letter-spacing="1">The Five Scripts, in Order of Birth</text>
+  <text x="72" y="114" font-size="16" fill="#b83521" letter-spacing="2">Seal &#8594; Clerical &#8594; Cursive &#8594; Semi-cursive &#8594; Standard</text>
+  <line x1="70" y1="140" x2="930" y2="140" stroke="#d8cfbf" stroke-width="1.5"/>
+
+  <!-- row 1 Seal -->
+  <text x="92" y="214" text-anchor="middle" font-size="22" fill="#b83521" letter-spacing="1">01</text>
+  <text x="150" y="214" font-size="30" font-weight="800" fill="#14110b">Seal</text>
+  <text x="150" y="240" font-size="15" fill="#8f8676">tensho</text>
+  <text x="430" y="222" font-size="18" fill="#574f42">The oldest of the five; still holds the pictograph</text>
+
+  <!-- row 2 Clerical -->
+  <text x="92" y="334" text-anchor="middle" font-size="22" fill="#b83521" letter-spacing="1">02</text>
+  <text x="150" y="334" font-size="30" font-weight="800" fill="#14110b">Clerical</text>
+  <text x="150" y="360" font-size="15" fill="#8f8676">reisho</text>
+  <text x="430" y="342" font-size="18" fill="#574f42">A simplified seal; the everyday hand</text>
+
+  <!-- row 3 Cursive -->
+  <text x="92" y="454" text-anchor="middle" font-size="22" fill="#b83521" letter-spacing="1">03</text>
+  <text x="150" y="454" font-size="30" font-weight="800" fill="#14110b">Cursive</text>
+  <text x="150" y="480" font-size="15" fill="#8f8676">sosho</text>
+  <text x="430" y="462" font-size="18" fill="#574f42">Clerical sped up and flowing; born first of the three</text>
+
+  <!-- row 4 Semi-cursive -->
+  <text x="92" y="574" text-anchor="middle" font-size="22" fill="#b83521" letter-spacing="1">04</text>
+  <text x="150" y="574" font-size="30" font-weight="800" fill="#14110b">Semi-cursive</text>
+  <text x="150" y="600" font-size="15" fill="#8f8676">gyosho</text>
+  <text x="430" y="582" font-size="18" fill="#574f42">After cursive; between standard and cursive</text>
+
+  <!-- row 5 Standard -->
+  <text x="92" y="694" text-anchor="middle" font-size="22" fill="#b83521" letter-spacing="1">05</text>
+  <text x="150" y="694" font-size="30" font-weight="800" fill="#14110b">Standard</text>
+  <text x="150" y="720" font-size="15" fill="#8f8676">kaisho</text>
+  <text x="430" y="702" font-size="18" fill="#574f42">Every stroke distinct; refined last of all</text>
+
+  <!-- insight -->
+  <line x1="70" y1="762" x2="930" y2="762" stroke="#d8cfbf" stroke-width="1.5"/>
+  <text x="70" y="800" font-size="16" fill="#b83521" letter-spacing="2">The surprising order</text>
+  <text x="70" y="828" font-size="19" fill="#574f42">We learn standard first, so it feels basic &#8212; but history runs the other way.</text>
+
+  <!-- AI note -->
+  <text x="930" y="846" text-anchor="end" font-size="14" fill="#a89f8e" letter-spacing="1">* Illustrative image (AI-generated)</text>
+</svg>

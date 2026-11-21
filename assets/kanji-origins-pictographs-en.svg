@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" font-family="Georgia,&quot;Shippori Mincho&quot;,&quot;Hiragino Mincho ProN&quot;,serif">
+  <rect width="1000" height="640" fill="#f4f2ec"/>
+
+  <!-- title -->
+  <text x="70" y="78" font-size="34" font-weight="700" fill="#14110b" letter-spacing="1">From Pictograph to Kanji</text>
+  <text x="72" y="110" font-size="16" fill="#b83521" letter-spacing="3">Tracing the shapes of things in line</text>
+  <line x1="70" y1="134" x2="930" y2="134" stroke="#d8cfbf" stroke-width="1.5"/>
+
+  <!-- column headers -->
+  <text x="200" y="176" text-anchor="middle" font-size="15" fill="#8f8676" letter-spacing="1">Pictograph (ancient form)</text>
+  <text x="560" y="176" text-anchor="middle" font-size="15" fill="#8f8676" letter-spacing="1">Today&#8217;s kanji</text>
+
+  <g stroke="#14110b" fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="200" cy="250" rx="40" ry="46"/>
+    <line x1="172" y1="250" x2="228" y2="250"/>
+    <path d="M158,470 L186,418 L200,446 L214,418 L242,470"/>
+    <path d="M200,446 L200,418"/>
+    <path d="M166,521 C160,543 172,571 166,595"/>
+    <path d="M200,515 C195,541 206,571 200,599"/>
+    <path d="M234,521 C240,543 228,571 234,595"/>
+  </g>
+  <path d="M212,316 A46,46 0 1,0 212,384 A33,46 0 1,1 212,316 Z" fill="#14110b"/>
+  <line x1="193" y1="350" x2="205" y2="350" stroke="#14110b" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- arrows -->
+  <g fill="#b83521">
+    <g transform="translate(0,250)"><path d="M360,0 h70" stroke="#b83521" stroke-width="6" stroke-linecap="round"/><path d="M430,-9 l16,9 -16,9 z"/></g>
+    <g transform="translate(0,350)"><path d="M360,0 h70" stroke="#b83521" stroke-width="6" stroke-linecap="round"/><path d="M430,-9 l16,9 -16,9 z"/></g>
+    <g transform="translate(0,445)"><path d="M360,0 h70" stroke="#b83521" stroke-width="6" stroke-linecap="round"/><path d="M430,-9 l16,9 -16,9 z"/></g>
+    <g transform="translate(0,555)"><path d="M360,0 h70" stroke="#b83521" stroke-width="6" stroke-linecap="round"/><path d="M430,-9 l16,9 -16,9 z"/></g>
+  </g>
+
+  <!-- modern kanji -->
+  <g fill="#14110b" font-size="82" font-weight="800" text-anchor="middle">
+    <text x="560" y="280">日</text>
+    <text x="560" y="380">月</text>
+    <text x="560" y="475">山</text>
+    <text x="560" y="585">川</text>
+  </g>
+
+  <!-- labels -->
+  <g font-size="22" fill="#574f42">
+    <text x="660" y="258">Sun</text><text x="660" y="286" font-size="15" fill="#8f8676">from the shape of the sun</text>
+    <text x="660" y="358">Moon</text><text x="660" y="386" font-size="15" fill="#8f8676">from the crescent moon</text>
+    <text x="660" y="453">Mountain</text><text x="660" y="481" font-size="15" fill="#8f8676">from a ridge of peaks</text>
+    <text x="660" y="563">River</text><text x="660" y="591" font-size="15" fill="#8f8676">from flowing water</text>
+  </g>
+
+  <!-- AI note -->
+  <text x="930" y="626" text-anchor="end" font-size="14" fill="#a89f8e" letter-spacing="1">* Illustrative image (AI-generated)</text>
+</svg>

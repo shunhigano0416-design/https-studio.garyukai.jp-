@@ -23,5 +23,8 @@ body_ja: '## 「上手い字」と「良い字」は、何が違うと考えま�
 body_en: '## What is the difference between a “skilled” hand and a “good” hand in calligraphy?
 
 
-  It is often said, and I think of it as the interplay of skill (deft or clumsy) and beauty (beautiful or plain). A calligrapher’s hand may be deft yet so weighted toward technique that it moves no one. A “good” hand, by contrast, is beautiful even when unpolished. To give a recent example, the characters written by a person with a disability can be technically unrefined, yet they lay the self utterly bare — and there lies their goodness. The classics of calligraphy hold a great many works of exactly this kind.'
+  It is often said, and I think of it as the interplay of skill (deft or clumsy) and beauty (beautiful or plain). A calligrapher’s hand may be deft yet so weighted toward technique that it moves no one. A “good” hand, by contrast, is beautiful even when unpolished. To give a recent example, the characters written by a person with a disability can be technically unrefined, yet they lay the self utterly bare — and there lies their goodness. The classics of calligraphy hold a great many works of exactly this kind.
+
+
+  ![A diagram contrasting a skilled hand and a good hand — technique on one axis, beauty on the other. A good hand lives on the side of beauty, and even an unpolished hand that bares the self is good.](/assets/good-vs-skilled-axes-en.svg)'
 ---

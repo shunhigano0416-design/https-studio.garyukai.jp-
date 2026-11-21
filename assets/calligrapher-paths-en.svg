@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 740" width="1000" height="740" font-family="Georgia,&quot;Shippori Mincho&quot;,&quot;Hiragino Mincho ProN&quot;,serif">
+  <rect width="1000" height="740" fill="#f4f2ec"/>
+
+  <!-- title -->
+  <text x="70" y="80" font-size="34" font-weight="700" fill="#14110b" letter-spacing="1">Making a Living by the Brush</text>
+  <text x="72" y="114" font-size="16" fill="#b83521" letter-spacing="2">There is no licence; you may begin at any time</text>
+  <line x1="70" y1="140" x2="930" y2="140" stroke="#d8cfbf" stroke-width="1.5"/>
+
+  <!-- row 1 -->
+  <circle cx="92" cy="208" r="7" fill="#b83521"/>
+  <text x="150" y="216" font-size="28" font-weight="800" fill="#14110b">School teacher</text>
+  <text x="150" y="248" font-size="18" fill="#574f42">Employed to teach calligraphy at a school</text>
+
+  <!-- row 2 -->
+  <circle cx="92" cy="328" r="7" fill="#b83521"/>
+  <text x="150" y="336" font-size="28" font-weight="800" fill="#14110b">Teaching professional</text>
+  <text x="150" y="368" font-size="18" fill="#574f42">Passing on what you&#8217;ve learned, in classes and lessons</text>
+
+  <!-- row 3 -->
+  <circle cx="92" cy="448" r="7" fill="#b83521"/>
+  <text x="150" y="456" font-size="28" font-weight="800" fill="#14110b">Selling your own work</text>
+  <text x="150" y="488" font-size="18" fill="#574f42">Like a painter or potter; hard to do in this era</text>
+
+  <!-- row 4 -->
+  <circle cx="92" cy="568" r="7" fill="#b83521"/>
+  <text x="150" y="576" font-size="28" font-weight="800" fill="#14110b">Hikko (brushwork for hire)</text>
+  <text x="150" y="608" font-size="18" fill="#574f42">Addressing envelopes and ceremonial papers; fading in the computer age</text>
+
+  <!-- footer insight -->
+  <line x1="70" y1="642" x2="930" y2="642" stroke="#d8cfbf" stroke-width="1.5"/>
+  <text x="70" y="680" font-size="16" fill="#b83521" letter-spacing="2">Common to every path</text>
+  <text x="70" y="710" font-size="19" fill="#574f42">To teach others, you must keep learning yourself. That alone is indispensable.</text>
+
+  <!-- AI note -->
+  <text x="930" y="726" text-anchor="end" font-size="14" fill="#a89f8e" letter-spacing="1">* Illustrative image (AI-generated)</text>
+</svg>

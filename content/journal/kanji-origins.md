@@ -75,6 +75,9 @@ body_en: 'Kanji began as pictographs — visible forms traced in line. In fact, 
   - **Mountain**: a distant ridge of higher and lower peaks.
 
 
+  ![A diagram showing how the pictographs for sun, moon, mountain and river grew from their ancient forms into today’s kanji.](/assets/kanji-origins-pictographs-en.svg)
+
+
   A familiar example: the emoji on your phone. One glance and you know the meaning. In function they are remarkably close to kanji — for writing was, from the start, a system you could *see and understand*.
 
 

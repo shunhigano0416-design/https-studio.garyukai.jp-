@@ -41,7 +41,7 @@ body_ja: '一言でいえば、書道とは「筆で自分を表現する芸術�
   理由は、文字の成り立ちにあります。漢字は意味を表す「表意文字」、アルファベットは音を表す「表音文字」。漢字は一字が意味を持つからこそ、その形や美しさに書き手の思いを盛り込むことができる。文字を書くことが、そのまま表現になる——ここに書道の核心があります。
 
 
-  ## あなたの一枚を
+  ![習字・書道・カリグラフィーの違いを示した図。習字（書写）は「正しく書く」でお手本の通りに整える、書道は「自分を表現する」で上手い下手よりその人らしさ、西洋のカリグラフィーは「美しく書く」で習字・レタリングに近い。漢字は一字が意味を持つ表意文字だからこそ、その形に思いを盛り込め、書くことがそのまま表現になる。](/assets/shodo-vs-shuji-calligraphy.svg)
 
 
   ## 上手い・下手ではなく
@@ -78,7 +78,7 @@ body_en: 'In a word, shodo is the art of expressing yourself with the brush. Wri
   The reason lies in how writing is built. Kanji are ideographs — each carries meaning; the alphabet is phonetic — it carries sound. Because a single kanji holds meaning, the writer can pour feeling into its very form and beauty. To write becomes, in itself, to express. That is the heart of shodo.
 
 
-  ## Your own single sheet
+  ![A diagram comparing shuji (penmanship), shodo and Western calligraphy. Shodo is self-expression; because kanji are ideographs, the writer can pour feeling into their very form.](/assets/shodo-vs-shuji-calligraphy-en.svg)
 
 
   ## Not “good” or “bad”

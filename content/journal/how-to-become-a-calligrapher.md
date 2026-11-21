@@ -22,7 +22,10 @@ body_ja: '## 「書道家になるには」まず何から始めるべきだと�
   ## 書道家として生計を立てるには、どんな道がありますか。
 
 
-  シビアな質問ですが、書道で飯を食うのは今の時代なかなか厳しい。私自身も、教えてきた若い学生たちもそうでした。一つは、書道の教員になって学校に勤める道。それ以外は、自分が得たものを人に教える「レッスンのプロ」になること。画家や彫刻家、陶芸家のように自分の作品を売って生計を立てるのは、今の時代なかなか難しい。かつては筆耕（宛名書きや熨斗袋書きなど）の仕事もありましたが、パソコンの時代でそれも減りつつあります。書道で食べていくのは、本当に厳しいです。'
+  シビアな質問ですが、書道で飯を食うのは今の時代なかなか厳しい。私自身も、教えてきた若い学生たちもそうでした。一つは、書道の教員になって学校に勤める道。それ以外は、自分が得たものを人に教える「レッスンのプロ」になること。画家や彫刻家、陶芸家のように自分の作品を売って生計を立てるのは、今の時代なかなか難しい。かつては筆耕（宛名書きや熨斗袋書きなど）の仕事もありましたが、パソコンの時代でそれも減りつつあります。書道で食べていくのは、本当に厳しいです。
+
+
+  ![書で生計を立てる主な道を示した図。書道教員（学校に勤める）、教えるプロ（教室・レッスン）、作品を売る（今の時代は難しい）、筆耕（宛名書き・熨斗袋などでPCの普及により減少）の四つ。どの道も、人に教えるには自分が学び続けることが欠かせない。](/assets/calligrapher-paths.svg)'
 body_en: '## If someone wishes to become a calligrapher, where should they begin?
 
 
@@ -32,5 +35,8 @@ body_en: '## If someone wishes to become a calligrapher, where should they begin
   ## What are the realistic paths to making a living as a calligrapher?
 
 
-  It is a hard truth, but to live by calligraphy is difficult in this age — as it was for me, and for the young students I have taught. One path is to become a calligraphy teacher employed by a school. Otherwise, it is to become a professional at teaching what one has gained — a master of lessons. To live, as a painter or sculptor or potter might, by creating and selling one’s own works alone is, in this era, very hard for a calligrapher. There was once the craft of hikko — brush-work for hire, addressing envelopes and inscribing ceremonial envelopes — but in the age of the computer even that is fading. Truly, to make a living by calligraphy is severe.'
+  It is a hard truth, but to live by calligraphy is difficult in this age — as it was for me, and for the young students I have taught. One path is to become a calligraphy teacher employed by a school. Otherwise, it is to become a professional at teaching what one has gained — a master of lessons. To live, as a painter or sculptor or potter might, by creating and selling one’s own works alone is, in this era, very hard for a calligrapher. There was once the craft of hikko — brush-work for hire, addressing envelopes and inscribing ceremonial envelopes — but in the age of the computer even that is fading. Truly, to make a living by calligraphy is severe.
+
+
+  ![A diagram of the main ways to make a living by calligraphy — school teacher, teaching professional, selling your own work, and hikko (brushwork for hire) — all of which call for lifelong learning in order to teach.](/assets/calligrapher-paths-en.svg)'
 ---

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720" font-family="&quot;Shippori Mincho&quot;,&quot;Yu Mincho&quot;,&quot;Hiragino Mincho ProN&quot;,serif">
+  <rect width="1000" height="720" fill="#f4f2ec"/>
+
+  <!-- title -->
+  <text x="70" y="80" font-size="33" font-weight="700" fill="#14110b" letter-spacing="2">習字・書道・カリグラフィー、どう違う？</text>
+  <text x="72" y="114" font-size="16" fill="#b83521" letter-spacing="3">同じ「筆で書く」でも、めざすものが違う</text>
+  <line x1="70" y1="140" x2="930" y2="140" stroke="#d8cfbf" stroke-width="1.5"/>
+
+  <!-- center accent box (書道) -->
+  <rect x="360" y="176" width="280" height="300" rx="10" fill="#b83521" opacity="0.06"/>
+
+  <!-- column 1: 習字 -->
+  <text x="225" y="228" text-anchor="middle" font-size="30" font-weight="800" fill="#14110b">習字</text>
+  <text x="225" y="256" text-anchor="middle" font-size="14" fill="#8f8676">書写</text>
+  <text x="225" y="330" text-anchor="middle" font-size="21" fill="#9a6a5c">正しく書く</text>
+  <text x="225" y="372" text-anchor="middle" font-size="17" fill="#574f42">お手本の通りに、整える</text>
+
+  <!-- column 2: 書道 (accent) -->
+  <text x="500" y="230" text-anchor="middle" font-size="34" font-weight="800" fill="#b83521">書道</text>
+  <text x="500" y="258" text-anchor="middle" font-size="14" fill="#b83521">自己表現</text>
+  <text x="500" y="332" text-anchor="middle" font-size="22" fill="#b83521">自分を表現する</text>
+  <text x="500" y="374" text-anchor="middle" font-size="17" fill="#574f42">上手い下手より、その人らしさ</text>
+
+  <!-- column 3: カリグラフィー -->
+  <text x="775" y="228" text-anchor="middle" font-size="24" font-weight="800" fill="#14110b">カリグラフィー</text>
+  <text x="775" y="256" text-anchor="middle" font-size="14" fill="#8f8676">西洋</text>
+  <text x="775" y="330" text-anchor="middle" font-size="21" fill="#9a6a5c">美しく書く</text>
+  <text x="775" y="372" text-anchor="middle" font-size="17" fill="#574f42">習字・レタリングに近い</text>
+
+  <!-- footer insight -->
+  <line x1="70" y1="540" x2="930" y2="540" stroke="#d8cfbf" stroke-width="1.5"/>
+  <text x="70" y="580" font-size="16" fill="#b83521" letter-spacing="2">文字の成り立ちから</text>
+  <text x="70" y="614" font-size="19" fill="#574f42">漢字は、一字が意味を持つ「表意文字」。</text>
+  <text x="70" y="648" font-size="19" fill="#574f42">だからこそ、その形や美しさに思いを盛り込める。</text>
+  <text x="70" y="682" font-size="19" fill="#574f42">書くことが、そのまま表現になる。ここに書道の核心があります。</text>
+
+  <!-- AI note -->
+  <text x="930" y="706" text-anchor="end" font-size="14" fill="#a89f8e" letter-spacing="1">※ イメージ図（AIによる作成）</text>
+</svg>

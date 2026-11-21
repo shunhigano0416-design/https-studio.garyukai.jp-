@@ -80,6 +80,9 @@ body_en: 'Kanji have five scripts — the “five bodies” (gotai): seal (tensh
   Because we learn kaisho first, it feels as if gyosho and sosho are “loosened” kaisho. History runs the other way: **gyosho and sosho were born before kaisho.** They arose from abbreviating and speeding up the earlier clerical script — cursive first, then semi-cursive. Standard script was the last to be refined. It is a fact few people know.
 
 
+  ![A diagram of the five scripts in the order they were born — seal is the oldest, then clerical; among standard, semi-cursive and cursive, cursive came first, then semi-cursive, and standard was refined last.](/assets/five-scripts-order-en.svg)
+
+
   ## Which script to choose
 
 

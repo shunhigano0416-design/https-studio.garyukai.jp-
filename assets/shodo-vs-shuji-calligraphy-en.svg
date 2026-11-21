@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720" font-family="Georgia,&quot;Shippori Mincho&quot;,&quot;Hiragino Mincho ProN&quot;,serif">
+  <rect width="1000" height="720" fill="#f4f2ec"/>
+
+  <!-- title -->
+  <text x="70" y="80" font-size="30" font-weight="700" fill="#14110b" letter-spacing="1">Shuji, Shodo, Calligraphy &#8212; how do they differ?</text>
+  <text x="72" y="114" font-size="16" fill="#b83521" letter-spacing="2">The same brush, but a different aim</text>
+  <line x1="70" y1="140" x2="930" y2="140" stroke="#d8cfbf" stroke-width="1.5"/>
+
+  <!-- center accent box (Shodo) -->
+  <rect x="360" y="176" width="280" height="300" rx="10" fill="#b83521" opacity="0.06"/>
+
+  <!-- column 1: Shuji -->
+  <text x="225" y="228" text-anchor="middle" font-size="30" font-weight="800" fill="#14110b">Shuji</text>
+  <text x="225" y="256" text-anchor="middle" font-size="14" fill="#8f8676">penmanship</text>
+  <text x="225" y="330" text-anchor="middle" font-size="20" fill="#9a6a5c">Write correctly</text>
+  <text x="225" y="372" text-anchor="middle" font-size="16" fill="#574f42">Reproduce the model, neatly</text>
+
+  <!-- column 2: Shodo (accent) -->
+  <text x="500" y="230" text-anchor="middle" font-size="32" font-weight="800" fill="#b83521">Shodo</text>
+  <text x="500" y="258" text-anchor="middle" font-size="14" fill="#b83521">self-expression</text>
+  <text x="500" y="332" text-anchor="middle" font-size="21" fill="#b83521">Express yourself</text>
+  <text x="500" y="374" text-anchor="middle" font-size="16" fill="#574f42">Character over skill</text>
+
+  <!-- column 3: Calligraphy -->
+  <text x="775" y="228" text-anchor="middle" font-size="24" font-weight="800" fill="#14110b">Calligraphy</text>
+  <text x="775" y="256" text-anchor="middle" font-size="14" fill="#8f8676">Western</text>
+  <text x="775" y="330" text-anchor="middle" font-size="20" fill="#9a6a5c">Write beautifully</text>
+  <text x="775" y="372" text-anchor="middle" font-size="16" fill="#574f42">Closer to penmanship / lettering</text>
+
+  <!-- footer insight -->
+  <line x1="70" y1="540" x2="930" y2="540" stroke="#d8cfbf" stroke-width="1.5"/>
+  <text x="70" y="580" font-size="16" fill="#b83521" letter-spacing="2">From how writing is built</text>
+  <text x="70" y="614" font-size="19" fill="#574f42">Kanji are ideographs &#8212; each character carries its own meaning.</text>
+  <text x="70" y="648" font-size="19" fill="#574f42">So the writer can pour feeling into its very form and beauty.</text>
+  <text x="70" y="682" font-size="19" fill="#574f42">To write becomes, in itself, to express &#8212; the heart of shodo.</text>
+
+  <!-- AI note -->
+  <text x="930" y="706" text-anchor="end" font-size="14" fill="#a89f8e" letter-spacing="1">* Illustrative image (AI-generated)</text>
+</svg>

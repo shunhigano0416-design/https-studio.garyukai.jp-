@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="1000" height="800" font-family="Georgia,&quot;Shippori Mincho&quot;,&quot;Hiragino Mincho ProN&quot;,serif">
+  <rect width="1000" height="800" fill="#f4f2ec"/>
+
+  <!-- title -->
+  <text x="70" y="78" font-size="30" font-weight="700" fill="#14110b" letter-spacing="1">&#8220;Skilled&#8221; vs. &#8220;Good&#8221; &#8212; what&#8217;s the difference?</text>
+  <text x="72" y="110" font-size="16" fill="#b83521" letter-spacing="2">The interplay of skill (technique) and beauty</text>
+  <line x1="70" y1="136" x2="930" y2="136" stroke="#d8cfbf" stroke-width="1.5"/>
+
+  <!-- good hand band (beauty side) -->
+  <ellipse cx="500" cy="300" rx="330" ry="118" fill="#b83521" opacity="0.07"/>
+
+  <!-- axes -->
+  <g stroke="#c9bfac" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <line x1="150" y1="470" x2="862" y2="470"/>
+    <line x1="500" y1="214" x2="500" y2="676"/>
+  </g>
+  <path d="M862,470 l-13,-7 0,14 z" fill="#c9bfac"/>
+  <path d="M500,214 l-7,13 14,0 z" fill="#c9bfac"/>
+
+  <!-- axis end labels -->
+  <text x="500" y="196" text-anchor="middle" font-size="18" fill="#574f42">beautiful &#183; it moves you</text>
+  <text x="500" y="706" text-anchor="middle" font-size="15" fill="#9a9080">technique only</text>
+  <text x="792" y="500" text-anchor="middle" font-size="17" fill="#574f42">skilled (high technique)</text>
+  <text x="192" y="500" text-anchor="middle" font-size="17" fill="#574f42">unpolished</text>
+
+  <!-- good hand label -->
+  <text x="500" y="262" text-anchor="middle" font-size="26" font-weight="800" fill="#b83521" letter-spacing="1">A &#8220;good&#8221; hand</text>
+  <text x="500" y="292" text-anchor="middle" font-size="16" fill="#b83521">= a beautiful one</text>
+
+  <!-- unpolished-but-beautiful insight (upper-left) -->
+  <circle cx="330" cy="360" r="7" fill="#b83521"/>
+  <text x="330" y="392" text-anchor="middle" font-size="15" fill="#7a2318">Even if unpolished,</text>
+  <text x="330" y="414" text-anchor="middle" font-size="15" fill="#7a2318">a hand that bares the self is &#8220;good&#8221;</text>
+
+  <!-- skilled point -->
+  <circle cx="690" cy="560" r="7" fill="#14110b"/>
+  <text x="690" y="592" text-anchor="middle" font-size="17" fill="#14110b">A &#8220;skilled&#8221; hand (technique-heavy)</text>
+  <text x="690" y="615" text-anchor="middle" font-size="14" fill="#8f8676">deft, yet it may move no one</text>
+
+  <!-- footer insight -->
+  <line x1="70" y1="742" x2="930" y2="742" stroke="#d8cfbf" stroke-width="1.5"/>
+  <text x="70" y="780" font-size="18" fill="#574f42">The classics hold many a &#8220;good&#8221; hand &#8212; unpolished, yet beautiful.</text>
+
+  <!-- AI note -->
+  <text x="930" y="790" text-anchor="end" font-size="14" fill="#a89f8e" letter-spacing="1">* Illustrative image (AI-generated)</text>
+</svg>
