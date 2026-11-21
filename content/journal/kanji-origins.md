@@ -5,6 +5,7 @@ title_en: 'Where Kanji Come From: The World of Pictographs'
 category_ja: 書の基礎
 category_en: Primer
 date: '2026-10-14'
+updated: '2026-11-21'
 eyecatch: /assets/img_6b356d3a61f7.jpg
 author: taku
 style: article
@@ -47,7 +48,7 @@ body_ja: '漢字のはじまりは「象形文字」——目に見える形を�
   ## 「書く」が、書体を生んだ
 
 
-  字が増えると、今度は「どう書くか」が育ちます。こうして生まれたのが、篆書（てんしょ）・隷書（れいしょ）・行書（ぎょうしょ）・草書（そうしょ）・楷書（かいしょ）という五つの書体。それぞれが時代とともに姿を変えていきました。成り立ちを知ると、一字の見え方が変わります。
+  字が増えると、今度は「どう書くか」が育ちます。こうして生まれたのが、篆書（てんしょ）・隷書（れいしょ）・行書（ぎょうしょ）・草書（そうしょ）・楷書（かいしょ）という[五つの書体](https://studio.garyukai.jp/journal/five-scripts/)。それぞれが時代とともに姿を変えていきました。成り立ちを知ると、一字の見え方が変わります。
 
 
   ## 成り立ちを知ると、書が変わる
@@ -90,7 +91,7 @@ body_en: 'Kanji began as pictographs — visible forms traced in line. In fact, 
   ## Writing gave birth to the scripts
 
 
-  As the characters grew, so did the question of *how* to write them — and from that came five scripts: seal (tensho), clerical (reisho), semi-cursive (gyosho), cursive (sosho) and standard (kaisho), each changing with its age. Know a character’s origins, and it begins to look different in your hand.
+  As the characters grew, so did the question of *how* to write them — and from that came [five scripts](https://studio.garyukai.jp/en/journal/five-scripts/): seal (tensho), clerical (reisho), semi-cursive (gyosho), cursive (sosho) and standard (kaisho), each changing with its age. Know a character’s origins, and it begins to look different in your hand.
 
 
   ## Knowing the origins changes the writing

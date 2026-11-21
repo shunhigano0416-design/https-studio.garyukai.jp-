@@ -4,6 +4,7 @@ title_en: '''Skilled'' vs. ''Good'': What Truly Makes Calligraphy Move Us'
 category_ja: 随筆
 category_en: Essay
 date: '2026-09-06'
+updated: '2026-11-21'
 eyecatch: /assets/img_b7f922aafcbb.jpg
 author: taku
 style: qa

@@ -163,7 +163,10 @@ FOOT='</div></main><footer><div class="wrap"><p>書道研究 臥龍会 · GARYUK
 
 # ---------- structured data ----------
 ORG={"@context":"https://schema.org","@type":["Organization","LocalBusiness"],"name":"書道研究 臥龍会",
-     "alternateName":"Garyukai","url":BASE+"/","logo":OGP,
+     "alternateName":"Garyukai","url":BASE+"/","logo":OGP,"image":OGP,
+     "foundingDate":"1940-02-11","telephone":"+81-28-633-2005","areaServed":"JP",
+     "address":{"@type":"PostalAddress","streetAddress":"大寛2-6-21","addressLocality":"宇都宮市",
+                "addressRegion":"栃木県","postalCode":"320-0867","addressCountry":"JP"},
      "sameAs":["https://instagram.com/garyu_shodo","https://instagram.com/garyu_shodo_en","https://garyukai.jp/"]}
 def person_ld(lang):
     return {"@context":"https://schema.org","@type":"Person",
@@ -175,9 +178,9 @@ def person_ld(lang):
             "knowsAbout":["書道","篆書","隷書","古代文字","日本の伝統文化"] if lang=="ja" else ["Japanese calligraphy","seal script","clerical script","ancient Chinese characters","Japanese traditional culture"],
             "worksFor":{"@type":"Organization","name":"書道研究 臥龍会","url":BASE+"/"},
             "sameAs":["https://instagram.com/garyu_shodo","https://instagram.com/garyu_shodo_en"]}
-def article_ld(lang,title,desc,url,img,date,atype="Article",about=None,section="Journal"):
+def article_ld(lang,title,desc,url,img,date,atype="Article",about=None,section="Journal",modified=None):
     d={"@context":"https://schema.org","@type":atype,"headline":title,"description":desc,
-       "inLanguage":lang,"datePublished":date,"dateModified":date,
+       "inLanguage":lang,"datePublished":date,"dateModified":(modified or date),
        "author":{"@type":"Person","name":"日賀野 琢" if lang=="ja" else "Taku Higano",
                  "url":(BASE+"/about/higano-taku/") if lang=="ja" else (BASE+"/en/about/higano-taku/")},
        "publisher":ORG,"mainEntityOfPage":url,"image":img,"articleSection":section}
@@ -334,6 +337,7 @@ def build_article(a,lang,arts=None):
     lead=a.get("excerpt_"+lang,"")
     img=eurl(a.get("eyecatch",""))
     date=str(a.get("date","")); section=a.get("category_"+lang,"") or "Journal"
+    modified=str(a.get("updated","")) or date
     url=article_url(slug,lang); alt_ja=article_url(slug,"ja"); alt_en=article_url(slug,"en")
     home=(BASE+"/") if lang=="ja" else (BASE+"/en/")
     hub_url=(BASE+"/journal/") if lang=="ja" else (BASE+"/en/journal/")
@@ -341,11 +345,11 @@ def build_article(a,lang,arts=None):
     atype="NewsArticle" if is_news else "Article"
     about=[{"@type":"Thing","name":"書道" if lang=="ja" else "Japanese calligraphy"}]
     if is_news: about.append({"@type":"Thing","name":"ユネスコ無形文化遺産" if lang=="ja" else "UNESCO Intangible Cultural Heritage"})
-    ld=[article_ld(lang,title,desc,url,img,date,atype=atype,about=about,section=section),
+    ld=[article_ld(lang,title,desc,url,img,date,atype=atype,about=about,section=section,modified=modified),
         breadcrumb_ld([("臥龍会" if lang=="ja" else "Garyukai",home),
                        ("読み物" if lang=="ja" else "Journal",hub_url),(title,url)])]
     extra=(f'<meta property="article:published_time" content="{date}">'
-           f'<meta property="article:modified_time" content="{date}">'
+           f'<meta property="article:modified_time" content="{modified}">'
            f'<meta property="article:author" content="{"日賀野 琢" if lang=="ja" else "Taku Higano"}">'
            f'<meta property="article:section" content="{esc(section)}">')
     body_md=a.get("body_"+lang,"") or ""
@@ -377,7 +381,9 @@ def build_article(a,lang,arts=None):
     page=(h+f'<img class="eyecatch" src="{img}" alt="{esc(title)}" width="1200" height="600" decoding="async" fetchpriority="high">'
           f'<p class="eyebrow">{esc(eyebrow)}</p><h1>{esc(title)}</h1>'
           f'<p class="byline">{by}</p>'
-          + f'<p class="pubdate"><time datetime="{date}">{("公開 " if lang=="ja" else "Published ")}{disp_date(date)}</time></p>'
+          + f'<p class="pubdate"><time datetime="{date}">{("公開 " if lang=="ja" else "Published ")}{disp_date(date)}</time>'
+          + (f'<time datetime="{modified}"> ・ {("更新 " if lang=="ja" else "Updated ")}{disp_date(modified)}</time>' if modified!=date else '')
+          + '</p>'
           + (f'<p class="lead">{esc(lead)}</p>' if lead else '')
           + body + rel_html + cta(lang)
           + f'<a class="backlink" href="{BASE}/{"en/" if lang=="en" else ""}journal/">← {back}</a>'
@@ -477,7 +483,7 @@ def build_sitemap(arts):
            (BASE+"/journal/",BASE+"/en/journal/",today),
            (BASE+"/about/higano-taku/",BASE+"/en/about/higano-taku/",today)]
     for a in arts:
-        d=str(a.get("date",""))[:10] or today
+        d=str(a.get("updated","") or a.get("date",""))[:10] or today
         pairs.append((article_url(a["slug"],"ja"),article_url(a["slug"],"en"),d))
     def alts(ja,en):
         return (f'<xhtml:link rel="alternate" hreflang="ja" href="{ja}"/>'

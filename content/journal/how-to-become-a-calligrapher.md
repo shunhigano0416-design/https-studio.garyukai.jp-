@@ -4,6 +4,7 @@ title_en: 'How to Become a Calligrapher: What It Means to Live by the Brush'
 category_ja: インタビュー
 category_en: Interview
 date: '2026-09-06'
+updated: '2026-11-21'
 eyecatch: /assets/img_9e151b46229d.jpg
 author: taku
 style: qa

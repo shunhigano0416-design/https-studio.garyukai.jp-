@@ -5,6 +5,7 @@ title_en: What Is Shodo? How It Differs from Penmanship and Calligraphy
 category_ja: 書の基礎
 category_en: Primer
 date: '2026-10-14'
+updated: '2026-11-21'
 eyecatch: /assets/img_bf24f397e44d.jpg
 author: taku
 style: article
@@ -23,7 +24,7 @@ body_ja: '一言でいえば、書道とは「筆で自分を表現する芸術�
   初めての方には、まず「書道は習字とは違う」とお伝えしています。習字は、小学校・中学校で学ぶ「書写」。お手本を見て、その通りに正しく整えて書く練習です。大切な基礎ですが、目的は「正しく書くこと」にあります。
 
 
-  書道は、そこから一歩進みます。高等学校以降、文字は「表現」の対象になります。整っているかどうかではなく、その人らしさ、その一枚にしか宿らない気配を大切にする。だから臥龍会では、上手い・下手という物差しではなく、文字を通した自己表現を何よりも大切にしています。
+  書道は、そこから一歩進みます。高等学校以降、文字は「表現」の対象になります。整っているかどうかではなく、その人らしさ、その一枚にしか宿らない気配を大切にする。だから臥龍会では、[上手い・下手](https://studio.garyukai.jp/journal/good-vs-skilled-calligraphy/)という物差しではなく、文字を通した自己表現を何よりも大切にしています。
 
 
   ## 「書」と「書道」——“道”が入ると変わるもの
@@ -38,7 +39,7 @@ body_ja: '一言でいえば、書道とは「筆で自分を表現する芸術�
   欧米の方にとって、筆で文字を書くことは「カリグラフィー」、つまり日本でいう習字やレタリングに近く、「文字をいかに美しく書くか」に重心があります。そのため、「文字そのものを通して自分を表現する」という感覚は、最初はつかみにくいようです。
 
 
-  理由は、文字の成り立ちにあります。漢字は意味を表す「表意文字」、アルファベットは音を表す「表音文字」。漢字は一字が意味を持つからこそ、その形や美しさに書き手の思いを盛り込むことができる。文字を書くことが、そのまま表現になる——ここに書道の核心があります。
+  理由は、文字の成り立ちにあります。[漢字](https://studio.garyukai.jp/journal/kanji-origins/)は意味を表す「表意文字」、アルファベットは音を表す「表音文字」。漢字は一字が意味を持つからこそ、その形や美しさに書き手の思いを盛り込むことができる。文字を書くことが、そのまま表現になる——ここに書道の核心があります。
 
 
   ![習字・書道・カリグラフィーの違いを示した図。習字（書写）は「正しく書く」でお手本の通りに整える、書道は「自分を表現する」で上手い下手よりその人らしさ、西洋のカリグラフィーは「美しく書く」で習字・レタリングに近い。漢字は一字が意味を持つ表意文字だからこそ、その形に思いを盛り込め、書くことがそのまま表現になる。](/assets/shodo-vs-shuji-calligraphy.svg)
@@ -60,7 +61,7 @@ body_en: 'In a word, shodo is the art of expressing yourself with the brush. Wri
   To a newcomer I first say: shodo is not shuji. Shuji — “shosha” — is what you learn in primary and middle school: looking at a model and reproducing it correctly and neatly. It is an essential foundation, but its aim is to write *correctly*.
 
 
-  Shodo goes one step further. From high school onward, the character becomes a vehicle for *expression*. What matters is not neatness but the presence that lives in this one sheet and no other. At Garyukai we treasure self-expression through the written character above any measure of “skilled” or “clumsy.”
+  Shodo goes one step further. From high school onward, the character becomes a vehicle for *expression*. What matters is not neatness but the presence that lives in this one sheet and no other. At Garyukai we treasure self-expression through the written character above any measure of [“skilled” or “clumsy”](https://studio.garyukai.jp/en/journal/good-vs-skilled-calligraphy/).
 
 
   ## “Sho” and “shodo” — what the word “do” adds
@@ -75,7 +76,7 @@ body_en: 'In a word, shodo is the art of expressing yourself with the brush. Wri
   For many in the West, writing with a brush means calligraphy — closer to Japanese penmanship or lettering, centred on “how to write letters beautifully.” So the idea of expressing yourself *through the character itself* can be hard to grasp at first.
 
 
-  The reason lies in how writing is built. Kanji are ideographs — each carries meaning; the alphabet is phonetic — it carries sound. Because a single kanji holds meaning, the writer can pour feeling into its very form and beauty. To write becomes, in itself, to express. That is the heart of shodo.
+  The reason lies in how writing is built. [Kanji](https://studio.garyukai.jp/en/journal/kanji-origins/) are ideographs — each carries meaning; the alphabet is phonetic — it carries sound. Because a single kanji holds meaning, the writer can pour feeling into its very form and beauty. To write becomes, in itself, to express. That is the heart of shodo.
 
 
   ![A diagram comparing shuji (penmanship), shodo and Western calligraphy. Shodo is self-expression; because kanji are ideographs, the writer can pour feeling into their very form.](/assets/shodo-vs-shuji-calligraphy-en.svg)

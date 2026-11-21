@@ -5,6 +5,7 @@ title_en: 'The Five Scripts: Seal, Clerical, Standard, Semi-cursive, Cursive'
 category_ja: 書の基礎
 category_en: Primer
 date: '2026-10-14'
+updated: '2026-11-21'
 eyecatch: /assets/img_2d9687f3b8d6.jpg
 author: taku
 style: article
@@ -20,7 +21,7 @@ body_ja: '漢字には、五つの書体——「五体」があります。篆�
   ## 篆書——もっとも古く、象形の面影を残す
 
 
-  篆書は、五体のなかで最も古い書体です。先にお話しした“絵のような”記号的な文字も、大きくは篆書の仲間。その完成形が、秦の始皇帝が統一した「小篆（しょうてん）」です。さらにさかのぼれば、甲骨文字や、青銅器に鋳造された「金文（きんぶん）」もあります。ひと言でいえば、最も古く、象形の面影が色濃く残る書体です。
+  篆書は、五体のなかで最も古い書体です。先にお話しした“絵のような”記号的な文字も、大きくは篆書の仲間。その完成形が、秦の始皇帝が統一した「小篆（しょうてん）」です。さらにさかのぼれば、甲骨文字や、青銅器に鋳造された「金文（きんぶん）」もあります。ひと言でいえば、最も古く、[象形](https://studio.garyukai.jp/journal/kanji-origins/)の面影が色濃く残る書体です。
 
 
   やがて隷書の時代になると、篆書は日常では使われなくなります。けれど、その荘厳さは失われませんでした。石碑の題字＝「篆額（てんがく）」に、そして印の世界＝「篆刻（てんこく）」に。公的で神秘的な場面にこそ、篆書は今も生き続けています。
@@ -58,7 +59,7 @@ body_en: 'Kanji have five scripts — the “five bodies” (gotai): seal (tensh
   ## Seal script — the oldest, still holding the pictograph
 
 
-  Seal script is the oldest of the five. Even those early, picture-like signs belong, broadly, to its family. Its finished form is the “small seal” (shoten), standardised by the First Emperor of Qin. Further back lie oracle-bone script and *kinbun*, the script cast into bronze vessels. In a word: the oldest script, still rich with the pictograph.
+  Seal script is the oldest of the five. Even those early, picture-like signs belong, broadly, to its family. Its finished form is the “small seal” (shoten), standardised by the First Emperor of Qin. Further back lie oracle-bone script and *kinbun*, the script cast into bronze vessels. In a word: the oldest script, still rich with the [pictograph](https://studio.garyukai.jp/en/journal/kanji-origins/).
 
 
   When the age of clerical script arrived, seal script left everyday use — yet its grandeur remained. It lives on in the titles carved on stone monuments (*tengaku*) and in the world of seals, *tenkoku* (seal-carving). In formal, mysterious settings, seal script endures.
