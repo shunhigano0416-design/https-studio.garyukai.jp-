@@ -105,7 +105,8 @@ h1{font-family:var(--mincho);font-weight:800;font-size:clamp(28px,4.6vw,44px);li
 .prof .photo{width:210px;aspect-ratio:4/5;background-size:cover;background-position:center top;flex:none}
 .prof .meta{flex:1;min-width:240px}
 .tags{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:20px}
-.tag{font-family:var(--mincho);font-size:14px;color:var(--ink2);position:relative}
+.tag{font-family:var(--mincho);font-size:14px;color:var(--ink2);position:relative;text-decoration:none;transition:color .2s}
+a.tag:hover{color:var(--shu)}
 .tag:not(:last-child)::after{content:"\FF0F";position:absolute;right:-18px;color:var(--line)}
 .backlink{display:inline-block;margin-top:32px;font-family:var(--mincho);font-weight:700;font-size:14px;color:var(--shu);text-decoration:none}
 footer{border-top:1px solid var(--line);padding:28px 0 48px;text-align:center;margin-top:clamp(40px,6vw,72px)}
@@ -430,13 +431,24 @@ def build_hub(arts,lang):
           f'<div class="cards">{cards}</div>{cta(lang)}'+FOOT)
     write(("journal/index.html") if lang=="ja" else ("en/journal/index.html"), page)
 
+TAG_URLS=[("日展","Nitten","https://nitten.or.jp/"),
+          ("読売書法","Yomiuri","https://yomiuri-shohokai.com/"),
+          ("全日本書道連盟","All-Japan Calligraphers","http://www.shoren.jp/"),
+          ("謙慎","Kenshin","https://www.kensinn.org/"),
+          ("埼玉学園","Saitama Gakuen","https://www.saigaku.ac.jp/")]
+def tagspan(t):
+    for ja,en,u in TAG_URLS:
+        if ja in t or en in t:
+            return f'<a class="tag" href="{u}" target="_blank" rel="noopener noreferrer">{esc(t)}</a>'
+    return f'<span class="tag">{esc(t)}</span>'
+
 def build_author(arts,lang):
     d=AUTHOR[lang]
     url=(BASE+"/about/higano-taku/") if lang=="ja" else (BASE+"/en/about/higano-taku/")
     alt_ja=BASE+"/about/higano-taku/"; alt_en=BASE+"/en/about/higano-taku/"
     ld=[person_ld(lang)]
     h=head(lang,d["title"],d["desc"],url,alt_ja,alt_en,ld,og_type="profile",image=eurl(AUTHOR_PHOTO))
-    tg="".join(f'<span class="tag">{esc(t)}</span>' for t in d["tags"])
+    tg="".join(tagspan(t) for t in d["tags"])
     ordered=sorted(arts,key=lambda a:(str(a.get("date","")), -a.get("order",999)), reverse=True)
     cards="".join(card(a,lang) for a in ordered)
     page=(h+f'<p class="eyebrow">{esc(d["eyebrow"])}</p><h1>{esc(d["title"])}</h1>'
