@@ -42,7 +42,7 @@ body_ja: '漢字のはじまりは「象形文字」——目に見える形を�
   ## 二つ重ねて、一つを部首にして——増えていく文字
 
 
-  はじめは、小学一年生が習うような基礎的な字がありました。そこから、二つを組み合わせたり、一つを部首にしたりしながら、文字はどんどん増えていきます。やがて中国・清の時代に編まれた『康熙字典（こうきじてん）』には、五万字を超える漢字が収められたと言われます。
+  はじめは、小学一年生が習うような基礎的な字がありました。そこから、二つを組み合わせたり、一つを部首にしたりしながら、文字はどんどん増えていきます。やがて中国・清の時代に編まれた『康熙字典（こうきじてん）』には、50,000字を超える漢字が収められたと言われます。
 
 
   ## 「書く」が、書体を生んだ
@@ -85,7 +85,7 @@ body_en: 'Kanji began as pictographs — visible forms traced in line. In fact, 
   ## Two combined, one made a radical — and the characters multiply
 
 
-  At first there were the basic characters a first-grader learns. From there, by combining two, or turning one into a radical, the characters multiplied. By the Qing dynasty, the *Kangxi Dictionary* is said to have gathered more than fifty thousand of them.
+  At first there were the basic characters a first-grader learns. From there, by combining two, or turning one into a radical, the characters multiplied. By the Qing dynasty, the *Kangxi Dictionary* is said to have gathered more than 50,000 of them.
 
 
   ## Writing gave birth to the scripts

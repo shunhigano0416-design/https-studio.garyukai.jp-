@@ -84,8 +84,9 @@ h1{font-family:var(--mincho);font-weight:800;font-size:clamp(28px,4.6vw,44px);li
 .cta .cta-sub a{color:var(--faint);text-decoration:underline;text-underline-offset:.2em;white-space:nowrap}
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2.4vw,26px);margin-top:clamp(20px,3vw,30px)}
 @media(max-width:620px){.cards{grid-template-columns:1fr;gap:16px}}
-.card{display:flex;flex-direction:column;text-decoration:none;background:var(--surface);border:1px solid var(--line2);border-radius:3px;box-shadow:var(--shadow);overflow:hidden;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
-.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.card{display:flex;flex-direction:column;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:7px;box-shadow:var(--shadow-h);overflow:hidden;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--shu)}
+.card .thumb{border-bottom:1px solid var(--line2)}
 .card .thumb{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
 .card .body{padding:clamp(18px,2vw,22px)}
 .card .k{font-family:var(--mincho);font-weight:700;font-size:12px;letter-spacing:.06em;color:var(--shu)}
@@ -392,7 +393,7 @@ def build_article(a,lang,arts=None):
           + (f'<time datetime="{modified}"> ・ {("更新 " if lang=="ja" else "Updated ")}{disp_date(modified)}</time>' if modified!=date else '')
           + '</p>'
           + (f'<p class="lead">{esc(lead)}</p>' if lead else '')
-          + body + rel_html + cta(lang)
+          + body + cta(lang) + rel_html
           + f'<a class="backlink" href="{BASE}/{"en/" if lang=="en" else ""}journal/">← {back}</a>'
           + FOOT)
     write(f'{"en/" if lang=="en" else ""}journal/{slug}/index.html', page)
@@ -422,7 +423,8 @@ def build_hub(arts,lang):
     ld=[{"@context":"https://schema.org","@type":"CollectionPage","name":title,"description":desc,"inLanguage":lang,"url":url,"isPartOf":ORG},
         breadcrumb_ld([("臥龍会" if lang=="ja" else "Garyukai",home),("読み物" if lang=="ja" else "Journal",url)]),
         ORG]
-    cards="".join(card(a,lang) for a in arts)
+    ordered=sorted(arts,key=lambda a:(str(a.get("date","")), -a.get("order",999)), reverse=True)
+    cards="".join(card(a,lang) for a in ordered)
     h=head(lang,title,desc,url,alt_ja,alt_en,ld,og_type="website")
     page=(h+f'<p class="eyebrow">{esc(eyebrow)}</p><h1>{esc(h1)}</h1><p class="lead">{esc(lead)}</p>'
           f'<div class="cards">{cards}</div>{cta(lang)}'+FOOT)
@@ -435,7 +437,8 @@ def build_author(arts,lang):
     ld=[person_ld(lang)]
     h=head(lang,d["title"],d["desc"],url,alt_ja,alt_en,ld,og_type="profile",image=eurl(AUTHOR_PHOTO))
     tg="".join(f'<span class="tag">{esc(t)}</span>' for t in d["tags"])
-    cards="".join(card(a,lang) for a in arts)
+    ordered=sorted(arts,key=lambda a:(str(a.get("date","")), -a.get("order",999)), reverse=True)
+    cards="".join(card(a,lang) for a in ordered)
     page=(h+f'<p class="eyebrow">{esc(d["eyebrow"])}</p><h1>{esc(d["title"])}</h1>'
           f'<div class="prof" style="margin-top:28px"><div class="photo" style="background-image:url(\'{eurl(AUTHOR_PHOTO)}\')"></div>'
           f'<div class="meta"><p style="margin:0;font-size:16px;line-height:2;color:var(--ink2)">{esc(d["bio"])}</p><div class="tags">{tg}</div></div></div>'

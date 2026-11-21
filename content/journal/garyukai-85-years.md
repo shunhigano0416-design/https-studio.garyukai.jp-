@@ -5,6 +5,7 @@ title_en: 'Eighty-Five Years of Garyukai: A Family and Its Circle, Carried by In
 category_ja: 臥龍会のあゆみ
 category_en: Our History
 date: '2026-10-25'
+updated: '2026-11-21'
 eyecatch: /assets/img_f047b20968b9.jpg
 author: taku
 style: article
@@ -25,7 +26,7 @@ body_ja: |
 
   ## 1940年、宇都宮に生まれた月刊誌「臥龍」
 
-  東華は当時、逓信省の官吏として宇都宮郵便局に勤めていました。公務のかたわら、志を同じくする仲間とともに、月刊競書誌「臥龍」を創刊します。全国を見渡しても、三十代半ばでこれほどの書道誌を興した例は、ほとんどなかったといいます。
+  東華は当時、逓信省の官吏として宇都宮郵便局に勤めていました。公務のかたわら、志を同じくする仲間とともに、月刊競書誌「臥龍」を創刊します。全国を見渡しても、30代半ばでこれほどの書道誌を興した例は、ほとんどなかったといいます。
 
   誌名の「臥龍」は、まだ天に昇らぬ、伏せた龍のこと。力を蓄え、時を待つその姿に、書に向かう心が重ねられています。表紙の題字は時代ごとに書き手を替えながら、いまも誌面の「顔」として受け継がれています。
 
@@ -71,7 +72,7 @@ body_en: |
 
   ## 1940: the monthly Garyu, born in Utsunomiya
 
-  At the time, Tōka served as an official of the Ministry of Communications at the Utsunomiya post office. Alongside his public duties, together with like-minded companions, he launched the monthly calligraphy journal Garyu. Across the whole country, it is said, there were almost no cases of someone founding a journal of such standing in their mid-thirties.
+  At the time, Tōka served as an official of the Ministry of Communications at the Utsunomiya post office. Alongside his public duties, together with like-minded companions, he launched the monthly calligraphy journal Garyu. Across the whole country, it is said, there were almost no cases of someone founding a journal of such standing in their mid-30s.
 
   The name Garyu means a reclining dragon, one that has not yet risen into the sky. In that figure, gathering its strength and biding its time, is mirrored the spirit of facing the brush. The title lettering on the cover has passed through different hands across the eras, and remains to this day the face of the journal.
 
