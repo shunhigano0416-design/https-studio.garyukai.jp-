@@ -74,11 +74,14 @@ h1{font-family:var(--mincho);font-weight:800;font-size:clamp(28px,4.6vw,44px);li
 .article img{width:100%;margin:1.4em 0}
 .article strong{font-weight:800}.article em{font-style:italic}
 .divider{height:0;border:none;margin:clamp(26px,4vw,40px) 0}
-.cta{margin-top:clamp(36px,5vw,56px);background:var(--paper2);padding:clamp(28px,4vw,40px);text-align:center}
-.cta h3{font-family:var(--mincho);font-weight:800;font-size:clamp(20px,2.6vw,27px);margin:0;color:var(--ink);line-height:1.5}
-.cta p{margin:14px auto 0;max-width:48ch;color:var(--ink2);font-size:15px;line-height:1.95}
-.cta .btn{display:inline-block;margin-top:22px;background:var(--shu);color:#fff;text-decoration:none;font-family:var(--mincho);font-weight:800;letter-spacing:.06em;padding:15px 34px;transition:background .2s}
-.cta .btn:hover{background:var(--shu-deep)}
+.cta{margin-top:clamp(40px,6vw,64px);background:var(--surface);border:1px solid var(--line);border-radius:4px;box-shadow:var(--shadow);padding:clamp(32px,4.6vw,48px);text-align:center}
+.cta .cta-eye{display:inline-block;font-family:var(--mincho);font-weight:800;font-size:12.5px;letter-spacing:.2em;color:var(--shu);margin-bottom:12px}
+.cta h3{font-family:var(--mincho);font-weight:800;font-size:clamp(22px,2.9vw,30px);margin:0;color:var(--ink);line-height:1.5;letter-spacing:.02em}
+.cta p{margin:14px auto 0;max-width:46ch;color:var(--ink2);font-size:15.5px;line-height:1.95}
+.cta .btn{display:inline-block;margin-top:26px;background:var(--shu);color:#fff;text-decoration:none;font-family:var(--mincho);font-weight:800;letter-spacing:.06em;font-size:16px;padding:16px 42px;border-radius:2px;transition:background .2s,transform .2s,box-shadow .2s;box-shadow:0 10px 24px -14px var(--shu)}
+.cta .btn:hover{background:var(--shu-deep);transform:translateY(-2px);box-shadow:0 16px 30px -12px var(--shu)}
+.cta .cta-sub{margin-top:16px;font-size:13px;color:var(--faint);letter-spacing:.02em}
+.cta .cta-sub a{color:var(--faint);text-decoration:underline;text-underline-offset:.2em;white-space:nowrap}
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2.4vw,26px);margin-top:clamp(20px,3vw,30px)}
 @media(max-width:620px){.cards{grid-template-columns:1fr;gap:16px}}
 .card{display:flex;flex-direction:column;text-decoration:none;background:var(--surface);border:1px solid var(--line2);border-radius:3px;box-shadow:var(--shadow);overflow:hidden;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
@@ -262,14 +265,18 @@ def write(path,content):
 # ---------- CTA / author data ----------
 def cta(lang):
     if lang=="ja":
-        return ('<div class="cta"><h3>書のご相談・ご依頼はこちら</h3>'
-                '<p>作品制作（企業ロゴ・記念品・空間装飾）、企業研修・講演会、訪日の方向けの書道体験まで。'
-                'どんな些細なことからでも、まずはお気軽にご相談ください。</p>'
-                f'<a class="btn" href="{BASE}/#contact">お問い合わせはこちら</a></div>')
-    return ('<div class="cta"><h3>Commission a work, or get in touch</h3>'
-            '<p>From custom calligraphy artwork and corporate workshops to calligraphy experiences for visitors to Japan — '
-            'every commission can begin from the smallest inquiry. We would be glad to hear from you.</p>'
-            f'<a class="btn" href="{BASE}/en/#contact">Get in touch</a></div>')
+        return ('<div class="cta"><span class="cta-eye">ご相談・ご依頼</span>'
+                '<h3>作品のご依頼も、書道体験も。</h3>'
+                '<p>企業ロゴ・記念品・空間装飾から、企業研修・講演会、訪日の方向けの書道体験まで。'
+                'お見積り・ご相談だけでも歓迎です。</p>'
+                f'<a class="btn" href="{BASE}/#contact">お問い合わせはこちら →</a>'
+                '<p class="cta-sub">ご相談・お見積りは無料　・　<a href="tel:0286332005">お電話 028-633-2005</a></p></div>')
+    return ('<div class="cta"><span class="cta-eye">Get in touch</span>'
+            '<h3>Commission a work — or simply say hello.</h3>'
+            '<p>From custom artwork and corporate workshops to calligraphy experiences for visitors to Japan. '
+            'Even the smallest inquiry is welcome.</p>'
+            f'<a class="btn" href="{BASE}/en/#contact">Contact us →</a>'
+            '<p class="cta-sub">Inquiries and estimates are free　·　<a href="tel:+81286332005">Call +81-28-633-2005</a></p></div>')
 
 AUTHOR={
  "ja":dict(title="日賀野 琢　書家 / 臥龍会 三代目",
