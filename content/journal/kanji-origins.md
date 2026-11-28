@@ -5,7 +5,7 @@ title_en: 'Where Kanji Come From: The World of Pictographs'
 category_ja: 書の基礎
 category_en: Primer
 date: '2026-10-14'
-updated: '2026-11-21'
+updated: '2026-11-28'
 eyecatch: /assets/img_6b356d3a61f7.jpg
 author: taku
 style: article
@@ -15,6 +15,22 @@ excerpt_ja: 漢字のはじまりは「象形文字」。太陽や月、山や�
 excerpt_en: Kanji began as pictographs — the sun, the moon, mountains and rivers traced in line. How they multiplied, and grew into the five scripts.
 desc_ja: 象形文字とは、目に見えるものの形を線でかたどった、漢字のはじまりの文字です。太陽・月・山・川の例から、漢字がどのように増え、篆・隷・楷・行・草の五体へ育ったのかまで、臥龍会 三代目・日賀野琢がやさしく解説します。
 desc_en: How did kanji evolve from pictographs? From sun, moon, mountain and river to the 50,000 characters of the Kangxi Dictionary and the five scripts — explained by Taku Higano of Garyukai.
+answer_ja: "象形文字とは、ものの形を線でかたどって生まれた、漢字のはじまりの文字です。太陽（日）・月・山・川などが代表例で、やがて組み合わさりながら数を増やしていきました。"
+answer_en: "Pictographs (shokei moji) are the earliest kanji — characters born by tracing the shapes of real things in line. Sun, moon, mountain and river are classic examples; from these the characters multiplied."
+faq_ja:
+  - q: "象形文字とは何ですか？"
+    a: "ものの形を線でかたどって生まれた、漢字のはじまりの文字です。太陽（日）、月、山、川などが代表例です。"
+  - q: "象形文字にはどんな例がありますか？"
+    a: "日（太陽の形）、月（三日月の形）、山（連なる峰の形）、川（流れる水の形）などがあります。"
+  - q: "漢字はどのように増えていったのですか？"
+    a: "象形文字を二つ組み合わせたり、一つを部首にしたりしながら増え、清の時代の『康熙字典』には50,000字を超える漢字が収められたといわれます。"
+faq_en:
+  - q: "What is a pictograph (shokei moji)?"
+    a: "It is the earliest form of kanji — a character born by tracing the shape of a real thing in line, such as the sun, moon, mountain or river."
+  - q: "What are some examples of pictographs?"
+    a: "Sun (日, the shape of the sun), moon (月, a crescent), mountain (山, a ridge of peaks) and river (川, flowing water)."
+  - q: "How did kanji multiply from pictographs?"
+    a: "By combining two pictographs, or turning one into a radical. By the Qing dynasty, the Kangxi Dictionary is said to have gathered more than 50,000 characters."
 body_ja: '漢字のはじまりは「象形文字」——目に見える形を、線でかたどった文字です。実は漢字に限らず、古代文明の文字の多くは、身のまわりの物や天体、森羅万象を“絵”のように写すところから生まれました。
 
 

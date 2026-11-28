@@ -5,7 +5,7 @@ title_en: 'The Five Scripts: Seal, Clerical, Standard, Semi-cursive, Cursive'
 category_ja: 書の基礎
 category_en: Primer
 date: '2026-10-14'
-updated: '2026-11-21'
+updated: '2026-11-28'
 eyecatch: /assets/img_2d9687f3b8d6.jpg
 author: taku
 style: article
@@ -15,6 +15,22 @@ excerpt_ja: 漢字には五つの書体があります。最古の篆書から�
 excerpt_en: Kanji have five scripts, from the ancient seal script to standard, semi-cursive and cursive — including the surprising order in which they were born.
 desc_ja: 漢字の書体は五つ（五体）。篆書・隷書・楷書・行書・草書を入門解説します。最古の篆書と小篆、篆額・篆刻に残る理由、そして楷・行・草の意外な誕生順まで、臥龍会 三代目・日賀野琢がやさしく語ります。
 desc_en: An introduction to the five scripts of kanji — seal, clerical, standard, semi-cursive and cursive — including small seal script, why seal survives in seals and monument titles, and the surprising order of their birth.
+answer_ja: "現在使われている漢字の書体は5つ（五体）——篆書・隷書・楷書・行書・草書です。日常では主に楷書・行書・草書が使われ、歴史的には篆書が最も古く、楷書が最後に整えられました。"
+answer_en: "There are five scripts (gotai): seal, clerical, standard, semi-cursive and cursive. Today we mainly use standard, semi-cursive and cursive — seal is the oldest, and standard was the last to be refined."
+faq_ja:
+  - q: "現在使われている漢字の書体はいくつありますか？"
+    a: "5つ（五体）です。篆書・隷書・楷書・行書・草書があり、現在の日常では主に楷書・行書・草書が使われます。"
+  - q: "楷書・行書・草書の違いは？"
+    a: "楷書は一点一画が明快な正式な書体、行書は楷書を少しくずしたもの、草書はさらに簡略化して続けて書いたものです。"
+  - q: "五体のうち最も古い書体はどれですか？"
+    a: "篆書です。象形の面影を残す最古の書体で、楷書は五体のなかで最後に整えられました。意外にも、行書・草書は楷書より先に生まれています。"
+faq_en:
+  - q: "How many kanji scripts are there?"
+    a: "Five — the gotai: seal, clerical, standard, semi-cursive and cursive. Today, standard, semi-cursive and cursive are the ones in everyday use."
+  - q: "What is the difference between standard, semi-cursive and cursive?"
+    a: "Standard (kaisho) keeps every stroke distinct; semi-cursive (gyosho) loosens it a little; cursive (sosho) simplifies further into a flowing, joined hand."
+  - q: "Which of the five scripts is the oldest?"
+    a: "Seal script (tensho), which still holds the pictograph. Standard was the last to be refined — and surprisingly, cursive and semi-cursive were born before it."
 body_ja: '漢字には、五つの書体——「五体」があります。篆書（てんしょ）・隷書（れいしょ）・楷書（かいしょ）・行書（ぎょうしょ）・草書（そうしょ）。まずは、一番古い篆書から見ていきましょう。
 
 

@@ -73,6 +73,19 @@ h1{font-family:var(--mincho);font-weight:800;font-size:clamp(28px,4.6vw,44px);li
 .article a{color:var(--shu);text-decoration:underline;text-underline-offset:.2em}
 .article img{width:100%;margin:1.4em 0}
 .article strong{font-weight:800}.article em{font-style:italic}
+.keyanswer{margin:24px 0 0;background:var(--surface2);border:1px solid var(--line2);border-left:3px solid var(--shu);border-radius:3px;padding:clamp(16px,2.2vw,22px) clamp(18px,2.4vw,26px)}
+.keyanswer .ka-lbl{font-family:var(--mincho);font-weight:800;font-size:12px;letter-spacing:.14em;color:var(--shu);display:block;margin-bottom:7px}
+.keyanswer p{margin:0;font-size:clamp(15.5px,1.7vw,17.5px);line-height:1.9;color:var(--ink)}
+.afaq{margin-top:clamp(36px,5vw,52px)}
+.afaq-h{font-family:var(--mincho);font-weight:800;font-size:clamp(20px,2.5vw,26px);color:var(--ink);margin:0 0 16px;letter-spacing:.01em}
+.afaq details{background:var(--surface2);border:1px solid var(--line2);border-radius:3px;padding:0 clamp(16px,2vw,22px);margin-bottom:10px;transition:border-color .2s,box-shadow .2s,background .2s}
+.afaq details:hover{border-color:var(--line);box-shadow:var(--shadow)}
+.afaq details[open]{background:var(--surface);box-shadow:var(--shadow)}
+.afaq summary{list-style:none;cursor:pointer;padding:16px 34px 16px 0;position:relative;font-family:var(--mincho);font-weight:800;font-size:clamp(15px,1.8vw,18px);color:var(--ink);line-height:1.6}
+.afaq summary::-webkit-details-marker{display:none}
+.afaq summary::after{content:"＋";position:absolute;right:2px;top:17px;color:var(--shu);font-family:var(--mincho);font-size:18px;font-weight:400;line-height:1}
+.afaq details[open] summary::after{content:"−"}
+.afaq details p{margin:0;padding:0 0 18px;color:var(--ink2);font-size:15px;line-height:1.95}
 .divider{height:0;border:none;margin:clamp(26px,4vw,40px) 0}
 .cta{margin-top:clamp(40px,6vw,64px);background:var(--surface);border:1px solid var(--line);border-radius:4px;box-shadow:var(--shadow);padding:clamp(32px,4.6vw,48px);text-align:center}
 .cta .cta-eye{display:inline-block;font-family:var(--mincho);font-weight:800;font-size:12.5px;letter-spacing:.2em;color:var(--shu);margin-bottom:12px}
@@ -357,6 +370,18 @@ def build_article(a,lang,arts=None):
     ld=[article_ld(lang,title,desc,url,img,date,atype=atype,about=about,section=section,modified=modified),
         breadcrumb_ld([("臥龍会" if lang=="ja" else "Garyukai",home),
                        ("読み物" if lang=="ja" else "Journal",hub_url),(title,url)])]
+    answer=a.get("answer_"+lang,"")
+    faq=a.get("faq_"+lang) or []
+    if faq:
+        ld.append({"@context":"https://schema.org","@type":"FAQPage",
+                   "mainEntity":[{"@type":"Question","name":x.get("q",""),
+                                  "acceptedAnswer":{"@type":"Answer","text":x.get("a","")}} for x in faq]})
+    ans_html=(f'<div class="keyanswer"><span class="ka-lbl">{"結論" if lang=="ja" else "In short"}</span>'
+              f'<p>{esc(answer)}</p></div>') if answer else ''
+    faq_html=''
+    if faq:
+        fh="".join(f'<details><summary>{esc(x.get("q",""))}</summary><p>{esc(x.get("a",""))}</p></details>' for x in faq)
+        faq_html=(f'<section class="afaq"><h2 class="afaq-h">{"よくある質問" if lang=="ja" else "Frequently asked questions"}</h2>{fh}</section>')
     extra=(f'<meta property="article:published_time" content="{date}">'
            f'<meta property="article:modified_time" content="{modified}">'
            f'<meta property="article:author" content="{"日賀野 琢" if lang=="ja" else "Taku Higano"}">'
@@ -394,7 +419,8 @@ def build_article(a,lang,arts=None):
           + (f'<time datetime="{modified}"> ・ {("更新 " if lang=="ja" else "Updated ")}{disp_date(modified)}</time>' if modified!=date else '')
           + '</p>'
           + (f'<p class="lead">{esc(lead)}</p>' if lead else '')
-          + body + cta(lang) + rel_html
+          + ans_html
+          + body + faq_html + cta(lang) + rel_html
           + f'<a class="backlink" href="{BASE}/{"en/" if lang=="en" else ""}journal/">← {back}</a>'
           + FOOT)
     write(f'{"en/" if lang=="en" else ""}journal/{slug}/index.html', page)
